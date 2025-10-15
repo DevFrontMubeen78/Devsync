@@ -6,17 +6,26 @@ import FeaturesIn from '../components/FeaturesIn';
 import Successfull from '../components/Successfull';
 import Offer from '../components/Offer';
 import DiscussSection from '../components/DiscussSection';
+import TopDev from '../components/TopDev';
+import ModernTechStack from '../components/ModernTechStack';
+import WhySolveIT from '../components/WhySolveIT';
+import Portfolio from '../components/Portfolio';
+import IndusExperties from '../components/IndusExperties';
+import Testimonial from '../components/Testimonial';
+import Contact from '../components/Contact';
+
+
 
 const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="hero-section flex flex-col gap-6 paddingTop">
-        <div className="container max-w-screen-xl mx-auto flex flex-col xl:gap-14 lg:gap-10 gap-6">
+      <section className="hero-section flex flex-col gap-16 paddingY-axis">
+        <div className="container flex flex-col xl:gap-14 lg:gap-10 gap-6">
           {/* Heading Section */}
           <div className="text-left">
             <div className="flex items-center gap-4 sm:gap-6 lg:gap-10 flex-wrap">
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl md:text-5xl font-extrabold leading-tight">
+              <h1 className="uppercase text-4xl lg:text-6xl xl:text-7xl md:text-5xl font-extrabold leading-tight">
                 We build
               </h1>
               <img
@@ -25,7 +34,7 @@ const Home = () => {
                 alt="Sticker"
               />
             </div>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl md:text-5xl font-extrabold leading-tight">
+            <h1 className="uppercase text-4xl lg:text-6xl xl:text-7xl md:text-5xl font-extrabold leading-tight">
               mobile and web apps
             </h1>
           </div>
@@ -35,36 +44,69 @@ const Home = () => {
             <p className="text-base sm:text-lg max-w-2xl leading-relaxed text-left">
               For startups, SMEs, and enterprises. Business-results oriented & AI-powered 🚀
             </p>
-            <div className="hidden xl:flex gap-6 items-center">
-              <GetAQuote />
+            <div className="hidden lg:flex gap-6 items-center">
+              <GetAQuote name="Get A Quote" />
               <ViewButton name="Portfolio" link="#" />
             </div>
           </div>
         </div>
 
-        <div className="">
           <ImageSlider />
-        </div>
       </section>
 
       {/* Features Section */}
-      <section className="feature-section">
+      <section className="feature-section paddingY-axis">
         <FeaturesIn />
       </section>
 
-      {/* Features Section */}
-      <section className="Successfull">
+      {/* Successfull Section */}
+      <section className="Successfull paddingY-axis bg_section">
         <Successfull />
       </section>
 
-      {/* Features Section */}
-      <section className="Offer">
+      {/* Offer Section */}
+      <section className="Offer paddingY-axis">
         <Offer />
       </section>
 
-      {/* connect Section */}
-      <section className="DiscussSection">
+      {/* DiscussSection Section */}
+      <section className="DiscussSection paddingY-axis bg_section">
         <DiscussSection />
+      </section>
+
+      {/* Top Development Section */}
+      <section className="TopDevelopment paddingY-axis">
+        <TopDev />
+      </section>
+
+      {/* Modern Tect Stack Section */}
+      <section className="MordernTech bg_section">
+        <ModernTechStack />
+      </section>
+
+      {/* why solve IT Section */}
+      <section className="solveIT paddingY-axis">
+        <WhySolveIT />
+      </section>
+
+      {/* Portfolio */}
+      <section className="Portfolio paddingY-axis bg_section">
+        <Portfolio />
+      </section>
+
+      {/* IndusExperties Section */}
+      <section className="IndusExperties paddingY-axis">
+        <IndusExperties />
+      </section>
+
+      {/* Testimonial Section */}
+      <section className="Testimonial paddingY-axis bg_section">
+        <Testimonial />
+      </section>
+
+      {/* Contact Section */}
+      <section className="Contact paddingY-axis">
+        <Contact />
       </section>
 
     </div>

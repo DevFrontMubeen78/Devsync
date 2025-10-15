@@ -1,42 +1,63 @@
 @import "tailwindcss";
 
 body {
-    /* background: #2b2b33; */
-    /* color: #fff !important */
-    color: #000 !important
+  /* background: #2b2b33; */
+  /* color: #fff !important */
+  color: #000 !important
 }
 
-.paddingTop {
-  padding: 50px 0px;
+.bg_section {
+  background-color: #1f2b2f;
+  color: #fff !important;
+}
+
+.paddingY-axis {
+  padding: 100px 0px;
 }
 
 .container {
-    position: relative;
-    width: 85%;
-    margin: 0px auto;
+  position: relative;
+  width: 85%;
+  margin: 0px auto;
 }
 
 @media (max-width : 767.98px) {
-    .container {
-        width: 90%;
-    }
+  .container {
+    width: 90%;
+  }
+
+  .inline {
+    display: none;
+  }
+
+  .container_hide {
+    width: 100% !important;
+  }
+}
+
+@media (max-width : 1200px) {
+  .container {
+    width: 95%;
+  }
+
+   .paddingY-axis {
+    padding: 50px 0px;
+  }
 }
 
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
 
-.slider-track {
-  animation: scroll 40s linear infinite;
-}
-
 .animate-scroll {
   animation: scroll 25s linear infinite;
+  display: flex;
 }
 
 .group:hover .animate-scroll {
@@ -44,3 +65,77 @@ body {
 }
 
 
+@media (max-width : 767.98px) {
+  .container {
+    width: 90%;
+  }
+
+  .inline {
+    display: none;
+  }
+}
+
+/* 🌀 Horizontal Scroll Left → Right */
+@keyframes scroll-x-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* 🌀 Horizontal Scroll Right → Left */
+@keyframes scroll-x-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-x-right {
+  display: flex;
+  animation: scroll-x-right 25s linear infinite;
+}
+
+.animate-scroll-x-left {
+  display: flex;
+  animation: scroll-x-left 25s linear infinite;
+}
+
+/* 🟣 Vertical Scroll for desktop */
+@keyframes scrollY-down {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scrollY-up {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-scrollY-down {
+  display: flex;
+  flex-direction: column;
+  animation: scrollY-down 100s linear infinite;
+}
+
+.animate-scrollY-up {
+  display: flex;
+  flex-direction: column;
+  animation: scrollY-up 100s linear infinite;
+}

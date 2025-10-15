@@ -12,19 +12,19 @@ const cardsData = [
   {
     title: "UI/UX Design",
     desc: "Crafting intuitive user experiences that feel natural and efficient.",
-    icon: "/img/icon5.avif",
+    icon: "/img/icon2.avif",
     link: "/services/ui-ux",
   },
   {
     title: "Web Development",
     desc: "Delivering high-performance, scalable websites and apps.",
-    icon: "/img/icon1.avif",
+    icon: "/img/icon3.avif",
     link: "/services/web-development",
   },
   {
     title: "Brand Identity",
     desc: "Building recognizable and strong brand identities that last.",
-    icon: "/img/icon2.avif",
+    icon: "/img/icon4.avif",
     link: "/services/brand-identity",
   },
   {
@@ -45,8 +45,8 @@ const ServicesSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="paddingTop container flex flex-col gap-10">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+    <div className="container flex flex-col gap-10">
+      <div className="grid md:grid-cols-2 gap-8 items-start">
         {/* Left Column: Heading + First Column Cards */}
         <div>
           {/* Heading */}

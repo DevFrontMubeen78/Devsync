@@ -16,7 +16,7 @@ const ImageSlider = () => {
     const handleClick = (e) => e.preventDefault();
 
     return (
-        <section className="w-full py-10 overflow-hidden">
+        <div className="w-full overflow-hidden">
             <div className="slider-wrapper group relative">
                 <div className="slider-track flex w-[200%] animate-scroll gap-8 group-hover:[animation-play-state:paused]">
                     {repeatedSlides.map((slide, index) => (
@@ -37,7 +37,7 @@ const ImageSlider = () => {
                             <a
                                 href={slide.link}
                                 onClick={handleClick}
-                                className="hidden md:flex absolute bottom-0 right-13 bg-white text-dark px-6 py-5 rounded-[50px] rounded-tr-[0px]
+                                className="hidden lg:flex absolute bottom-0 right-13 bg-white text-dark px-6 py-5 rounded-[50px] rounded-tr-[0px]
                                            items-center gap-2 transition-all duration-300 font-bold text-lg"
                             >
                                 <span>Explore Now</span>
@@ -47,7 +47,7 @@ const ImageSlider = () => {
                     ))}
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 

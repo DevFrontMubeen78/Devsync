@@ -1,68 +1,48 @@
 import React, { useState } from "react";
-import GetAQuote from '../components/GetAQuote';
+import GetAQuote from "../components/QuoteBtnPage";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="shadow-[0px_0px_16px_rgba(17,_17,_26,_0.1)] py-4 px-4 sm:px-6 bg-white min-h-[70px] tracking-wide relative z-50">
-      <div className="container grid grid-cols-12 items-center max-w-screen-xl mx-auto">
-        {/* ===== Logo (smaller column) ===== */}
+    <header className="sticky top-0 shadow-[0px_0px_16px_rgba(11,_11,_26,_0.1)] py-4 px-4 sm:px-6 bg-white/70 backdrop-blur-xs min-h-[70px] tracking-wide z-50 transition-all duration-300">
+      <div className="container grid grid-cols-12 items-center">
+        {/* ===== Logo ===== */}
         <div className="col-span-3 flex items-center">
           <a href="/" className="max-sm:hidden">
-            <img
-              src="https://readymadeui.com/readymadeui.svg"
-              alt="logo"
-              className="w-36"
-            />
+            <img src="/img/dev-logo.png" alt="logo" className="w-20" />
           </a>
           <a href="/" className="hidden max-sm:block">
-            <img
-              src="https://readymadeui.com/readymadeui-short.svg"
-              alt="logo"
-              className="w-9"
-            />
+            <img src="/img/dev-logo.png" alt="logo" className="w-20" />
           </a>
         </div>
 
-        {/* ===== Navigation (larger column) ===== */}
+        {/* ===== Navigation ===== */}
         <div className="col-span-9 flex justify-end items-center">
           {/* Desktop Nav */}
           <ul className="hidden lg:flex items-center gap-8">
             <li>
-              <a
-                href="/expertise"
-                className="text-slate-900 font-medium hover:text-blue-700 text-base"
-              >
+              <a href="/expertise" className="text-slate-900 font-medium hover:text-blue-700 text-base">
                 Expertise
               </a>
             </li>
             <li>
-              <a
-                href="/services"
-                className="text-slate-900 font-medium hover:text-blue-700 text-base"
-              >
+              <a href="/services" className="text-slate-900 font-medium hover:text-blue-700 text-base">
                 Services
               </a>
             </li>
             <li>
-              <a
-                href="/about"
-                className="text-slate-900 font-medium hover:text-blue-700 text-base"
-              >
+              <a href="/about" className="text-slate-900 font-medium hover:text-blue-700 text-base">
                 About Us
               </a>
             </li>
             <li>
-              <a
-                href="/portfolio"
-                className="text-slate-900 font-medium hover:text-blue-700 text-base"
-              >
+              <a href="/portfolio" className="text-slate-900 font-medium hover:text-blue-700 text-base">
                 Portfolio
               </a>
             </li>
             <li>
-              <GetAQuote />
+              <GetAQuote name="Get A Quote" />
             </li>
           </ul>
 
@@ -89,13 +69,13 @@ const Header = () => {
 
       {/* ===== Mobile Menu ===== */}
       <div
-        className={`fixed top-0 right-0 h-full w-2/3 max-w-[300px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50
+        className={`fixed top-0 right-0 h-full w-2/3 max-w-[350px] bg-white/90 backdrop-blur-md rounded-tl-3xl rounded-bl-3xl shadow-xl transform transition-transform duration-300 ease-in-out z-50
         ${menuOpen ? "translate-x-0" : "translate-x-full"} lg:hidden`}
       >
         {/* Close Button */}
         <button
           onClick={() => setMenuOpen(false)}
-          className="absolute top-4 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border border-gray-200 cursor-pointer"
+          className="absolute top-4 right-4 z-[100] rounded-full bg-white/70 backdrop-blur-sm w-9 h-9 flex items-center justify-center border border-gray-200 cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -108,18 +88,23 @@ const Header = () => {
         </button>
 
         {/* Mobile Links */}
-        <ul className="flex flex-col gap-6 mt-16 px-6">
+        <ul className="flex flex-col gap-6 mt-16 px-6 py-2">
           <li>
+            <a href="/" className="hidden max-sm:block">
+              <img src="/img/dev-logo.png" alt="logo" className="w-20" />
+            </a>
+          </li>
+          <li className="border-b border-gray-100 py-2">
             <a href="/expertise" className="text-slate-900 font-medium">
               Expertise
             </a>
           </li>
-          <li>
+          <li className="border-b border-gray-100 py-2">
             <a href="/services" className="text-slate-900 font-medium">
               Services
             </a>
           </li>
-          <li>
+          <li className="border-b border-gray-100 py-2">
             <a href="/about" className="text-slate-900 font-medium">
               About Us
             </a>
@@ -129,21 +114,16 @@ const Header = () => {
               Portfolio
             </a>
           </li>
-          <li>
-            <button
-              type="button"
-              className="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-md text-white font-medium"
-            >
-              Get a Quote
-            </button>
+          <li className="pt-4">
+            <GetAQuote name="Get A Quote" />
           </li>
         </ul>
       </div>
 
-      {/* ===== Overlay for Mobile ===== */}
+      {/* ===== Overlay with Blur ===== */}
       {menuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/20 backdrop-blur-[6px] z-40 lg:hidden transition-all duration-300"
           onClick={() => setMenuOpen(false)}
         ></div>
       )}
