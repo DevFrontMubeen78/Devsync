@@ -6,7 +6,7 @@ const ViewButton = ({ name, link, align = "center", variant = "blue", extraClass
   // Alignment control
   const alignmentClass =
     align === "left"
-      ? "justify-start"
+      ? "md:justify-start justify-center"
       : align === "right"
       ? "justify-end"
       : "justify-center";

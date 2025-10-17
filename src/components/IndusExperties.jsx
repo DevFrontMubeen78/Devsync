@@ -14,7 +14,7 @@ const IndusExperties = () => {
     ]
 
     return (
-        <div className="container flex flex-wrap justify-start items-center text-left">
+        <div className="container flex flex-wrap justify-start items-center text-left md:gap-0 gap-10">
             {/* ✅ Left Side (35%) */}
             <div className="w-full md:w-[35%] flex flex-col gap-10 text-left items-start mb-10 md:mb-0">
                 <h2 className="heading text-left">
@@ -46,7 +46,7 @@ const IndusExperties = () => {
             </div>
 
             {/* ✅ Button visible only on small screens (below list) */}
-            <div className="w-full md:hidden mt-6 text-left">
+            <div className="w-full md:hidden mt-6 flex md:justify-start justify-center text-center">
                 <ViewButton name="Learn More" link="/expertise" align="left" />
             </div>
         </div>
