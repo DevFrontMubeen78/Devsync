@@ -11,6 +11,7 @@ const ContactUs = lazy(() => import("./pages/ContactUs"));
 const Expertise = lazy(() => import("./pages/Expertise"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Services = lazy(() => import("./pages/Services"));
+const NotFound = lazy(() => import("./components/NotFound"));
 
 const App = () => {
   return (
@@ -18,16 +19,15 @@ const App = () => {
       <div className="relative flex flex-col min-h-screen">
         <Suspense fallback={<SpinnerOverlay />}>
           <Header />
-          <main className="flex-grow py-8">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<AboutUs />} />
-              <Route path="/contact" element={<ContactUs />} />
-              <Route path="/expertise" element={<Expertise />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/services" element={<Services />} />
-            </Routes>
-          </main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/expertise" element={<Expertise />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="*" element={<NotFound />} /> 
+          </Routes>
           <Footer />
         </Suspense>
       </div>

@@ -46,18 +46,18 @@ const Spinner = () => {
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white">
       {/* Logo */}
       <img
-        src="/img/dev-logo.png"
-        alt="Logo"
-        className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain drop-shadow-md"
+        src="/img/dev-logo-spinner.webp"
+        alt=""
+        className="w-18 h-18 sm:w-24 sm:h-24 md:w-22 md:h-22 object-contain drop-shadow-md"
       />
 
       {/* Devsync text */}
-      <p className="font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-widest uppercase text-center mt-3 mb-4">
+      <p className="font-extrabold text-xl sm:text-2xl md:text-3xl tracking-widest uppercase text-center mt-3 mb-4">
         {renderColoredText()}
       </p>
 
       {/* Progress bar */}
-      <div className="w-48 sm:w-64 md:w-80 h-3 bg-gray-200 rounded-full overflow-hidden">
+      <div className="w-40 sm:w-50 md:w-60 h-3 bg-gray-200 rounded-full overflow-hidden">
         <div
           className="h-full bg-gradient-to-r from-[#005ba2] to-[#e70606] transition-all duration-200 ease-out"
           style={{ width: `${progress}%` }}

@@ -46,12 +46,12 @@ const Home = () => {
             </p>
             <div className="hidden lg:flex gap-6 items-center">
               <GetAQuote name="Get A Quote" />
-              <ViewButton name="Portfolio" link="#" />
+              <ViewButton name="Portfolio" link="/portfolio" />
             </div>
           </div>
         </div>
 
-          <ImageSlider />
+        <ImageSlider />
       </section>
 
       {/* Features Section */}
@@ -91,7 +91,7 @@ const Home = () => {
 
       {/* Portfolio */}
       <section className="Portfolio paddingY-axis bg_section">
-        <Portfolio />
+        <Portfolio limit={3} showButton={true} />
       </section>
 
       {/* IndusExperties Section */}

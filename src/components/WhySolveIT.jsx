@@ -35,7 +35,7 @@ const WhySolveIT = () => {
   return (
     <div className="container">
       {/* Heading */}
-      <h1 className="xl:text-5xl md:text-4xl text-3xl leading-tight font-extrabold uppercase mb-16">
+      <h1 className="heading mb-16">
         Why Solve IT
       </h1>
 
@@ -65,7 +65,7 @@ const WhySolveIT = () => {
               {/* Hidden List — animates from bottom to top on hover */}
               <ul className="absolute bottom-0 left-0 w-full p-6 space-y-2 text-lg opacity-0 translate-y-[80px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-in-out">
                 {card.points.map((point, i) => (
-                  <li key={i}>{point}</li>
+                  <li className="list" key={i}>{point}</li>
                 ))}
               </ul>
             </div>

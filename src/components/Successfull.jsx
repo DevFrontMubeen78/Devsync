@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const countersData = [
   { label: "Client satisfaction rate", value: 100, suffix: "%" },
@@ -39,20 +39,20 @@ const Successfull = () => {
 
   return (
     <div className="container">
-
-      {/* First Row - Animated Counters */}
+      {/* Animated Counters */}
       <div className="grid xl:grid-cols-5 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-4 mb-12 text-center">
         {countersData.map((counter, index) => (
-          <div key={index} className="mb-6">
+          <div key={index} className="mb-6 flex flex-col gap-4">
             <h2 className="xl:text-6xl lg:text-5xl text-4xl font-extrabold">
-              {Math.floor(counts[index])}{counter.suffix}
+              {Math.floor(counts[index])}
+              {counter.suffix}
             </h2>
-            <p className="mt-1 text-sm sm:text-base">{counter.label}</p>
+            <p className="paragraph mt-1">{counter.label}</p>
           </div>
         ))}
       </div>
 
-      {/* Second Row - Logos */}
+      {/* Logos */}
       <div className="flex flex-wrap justify-around items-center gap-8 border border-white/30 rounded-[50px] md:p-[100px] p-[50px]">
         {logos.map((logo, index) => (
           <img
@@ -63,7 +63,6 @@ const Successfull = () => {
           />
         ))}
       </div>
-
     </div>
   );
 };

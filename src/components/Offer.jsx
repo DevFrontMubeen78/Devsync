@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
-import ViewButton from "../components/ViewButton"
+import ViewButton from "../components/ViewButton";
 
 const cardsData = [
   {
@@ -41,7 +41,7 @@ const cardsData = [
   },
 ];
 
-const ServicesSection = () => {
+const Offer = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -50,7 +50,7 @@ const ServicesSection = () => {
         {/* Left Column: Heading + First Column Cards */}
         <div>
           {/* Heading */}
-          <h1 className="xl:text-5xl md:text-4xl text-3xl font-extrabold uppercase mb-10">
+          <h1 className="heading mb-10">
             What we offer
           </h1>
 
@@ -69,8 +69,8 @@ const ServicesSection = () => {
                     onMouseEnter={() => setActiveIndex(actualIndex)}
                     className={`group block transition-all duration-500 p-8 rounded-[50px] cursor-pointer no-underline ${
                       isActive
-                        ? "bg-[#293437] text-white"
-                        : "bg-[#f4f5f6] text-[#293437] hover:bg-[#293437] hover:text-white"
+                        ? "bg-[#1f2b2f] text-white"
+                        : "bg-[#f4f5f6] text-[#1f2b2f] hover:bg-[#1f2b2f] hover:text-white"
                     }`}
                   >
                     {/* Top Row: Icon + Arrow */}
@@ -84,21 +84,22 @@ const ServicesSection = () => {
                         className={`flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-500 opacity-0 ${
                           isActive
                             ? "opacity-100 border-white bg-white/10"
-                            : "group-hover:opacity-100 border-[#293437] group-hover:border-white group-hover:bg-white/10"
+                            : "group-hover:opacity-100 border-[#1f2b2f] group-hover:border-white group-hover:bg-white/10"
                         }`}
                       >
                         <ArrowRight
                           className={`w-5 h-5 transition-all duration-500 ${
                             isActive
                               ? "text-white"
-                              : "text-[#293437] group-hover:text-white"
+                              : "text-[#1f2b2f] group-hover:text-white"
                           }`}
                         />
                       </div>
                     </div>
 
                     <h3 className="text-2xl font-semibold mb-3">{card.title}</h3>
-                    <p className="text-sm leading-relaxed">{card.desc}</p>
+                    {/* ✅ Global paragraph class used here */}
+                    <p className="paragraph">{card.desc}</p>
                   </a>
                 );
               })}
@@ -120,8 +121,8 @@ const ServicesSection = () => {
                   onMouseEnter={() => setActiveIndex(actualIndex)}
                   className={`group block transition-all duration-500 p-8 rounded-[50px] cursor-pointer no-underline ${
                     isActive
-                      ? "bg-[#293437] text-white"
-                      : "bg-[#f4f5f6] text-[#293437] hover:bg-[#293437] hover:text-white"
+                      ? "bg-[#1f2b2f] text-white"
+                      : "bg-[#f4f5f6] text-[#1f2b2f] hover:bg-[#1f2b2f] hover:text-white"
                   }`}
                 >
                   <div className="flex items-center justify-between mb-6">
@@ -134,29 +135,30 @@ const ServicesSection = () => {
                       className={`flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-500 opacity-0 ${
                         isActive
                           ? "opacity-100 border-white bg-white/10"
-                          : "group-hover:opacity-100 border-[#293437] group-hover:border-white group-hover:bg-white/10"
+                          : "group-hover:opacity-100 border-[#1f2b2f] group-hover:border-white group-hover:bg-white/10"
                       }`}
                     >
                       <ArrowRight
                         className={`w-5 h-5 transition-all duration-500 ${
                           isActive
                             ? "text-white"
-                            : "text-[#293437] group-hover:text-white"
+                            : "text-[#1f2b2f] group-hover:text-white"
                         }`}
                       />
                     </div>
                   </div>
 
                   <h3 className="text-2xl font-semibold mb-3">{card.title}</h3>
-                  <p className="text-sm leading-relaxed">{card.desc}</p>
+                  {/* ✅ Global paragraph class used here */}
+                  <p className="paragraph">{card.desc}</p>
                 </a>
               );
             })}
         </div>
       </div>
-      <ViewButton name="More Services" link="#" />
+      <ViewButton name="More Services" link="/services" />
     </div>
   );
 };
 
-export default ServicesSection;
+export default Offer;

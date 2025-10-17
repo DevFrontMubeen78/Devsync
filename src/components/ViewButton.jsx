@@ -13,7 +13,7 @@ const ViewButton = ({ name, link, align = "center", variant = "blue", extraClass
 
   // Color variants → easily extendable
   const variantClasses = {
-    blue: "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white",
+    blue: "border-[#025c9e] text-[#025c9e] hover:bg-[#025c9e] hover:text-white",
     green: "border-green-600 text-green-600 hover:bg-green-600 hover:text-white",
     red: "border-red-600 text-red-600 hover:bg-red-600 hover:text-white",
     yellow: "border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black",

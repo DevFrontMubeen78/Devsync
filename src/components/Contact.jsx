@@ -44,10 +44,10 @@ const Contact = () => {
     <div id="contact" className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
       {/* ✅ LEFT SIDE: Contact Form */}
       <div className="flex flex-col justify-center">
-        <h2 className="uppercase text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+        <h2 className="heading mb-4">
           Got a project in mind?
         </h2>
-        <p className="text-gray-600 mb-8">
+        <p className="paragraph mb-8">
           Fill the form and get a free consultation!
         </p>
 
@@ -102,7 +102,7 @@ const Contact = () => {
         </div>
 
         {/* Review */}
-        <p className="text-gray-600 italic mb-4 max-w-md">
+        <p className="paragraph italic mb-4 max-w-md">
           “{testimonials[index].text}”
         </p>
 
@@ -160,7 +160,7 @@ const Contact = () => {
           <h3 className="text-lg font-semibold flex items-center justify-center gap-2">
             {testimonials[index].name}
           </h3>
-          <p className="text-gray-400 flex items-center justify-center gap-2">
+          <p className="paragraph flex items-center justify-center gap-2">
             {testimonials[index].status} {testimonials[index].country}
           </p>
         </div>

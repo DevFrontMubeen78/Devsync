@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 py-4 sm:py-6 pt-12 pb-6">
+    <footer className="bg_section py-4 sm:py-6 pt-12 pb-6">
       <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
         {/* RESOURCES */}
@@ -14,10 +14,10 @@ const Footer = () => {
               "Photo Enhancement",
               "Explore All Tools",
             ].map((item, index) => (
-              <li key={index}>
+              <li key={index} className="list">
                 <a
                   href="#"
-                  className="text-[13px] text-gray-400 hover:text-white"
+                  className="hover:text-white"
                 >
                   {item}
                 </a>
@@ -35,10 +35,10 @@ const Footer = () => {
               "Our Story",
               "Latest Articles",
             ].map((item, index) => (
-              <li key={index}>
+              <li key={index} className="list">
                 <a
                   href="#"
-                  className="text-[13px] text-gray-400 hover:text-white"
+                  className="hover:text-white"
                 >
                   {item}
                 </a>
@@ -56,10 +56,10 @@ const Footer = () => {
               "User Agreement",
               "Manage Cookies",
             ].map((item, index) => (
-              <li key={index}>
+              <li key={index} className="list">
                 <a
                   href="#"
-                  className="text-[13px] text-gray-400 hover:text-white"
+                  className="hover:text-white"
                 >
                   {item}
                 </a>
@@ -72,8 +72,7 @@ const Footer = () => {
         <div className="space-y-6">
           <h6 className="text-sm text-white font-medium">SOCIAL MEDIA</h6>
           <ul className="flex space-x-4">
-            {/* Facebook */}
-            <li>
+            <li className="list">
               <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,8 +84,7 @@ const Footer = () => {
               </a>
             </li>
 
-            {/* LinkedIn */}
-            <li>
+            <li className="list">
               <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -102,8 +100,7 @@ const Footer = () => {
               </a>
             </li>
 
-            {/* Instagram */}
-            <li>
+            <li className="list">
               <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -133,8 +130,7 @@ const Footer = () => {
               </a>
             </li>
 
-            {/* X / Twitter */}
-            <li>
+            <li className="list">
               <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +152,7 @@ const Footer = () => {
       <hr className="my-6 border-gray-600" />
 
       <div className="max-w-screen-xl mx-auto text-center">
-        <p className="text-gray-400 text-[13px]">
+        <p className="paragraph text-[13px]">
           ReadymadeUI Copyright © 2024. All rights reserved.
         </p>
       </div>

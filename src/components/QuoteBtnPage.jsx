@@ -5,7 +5,7 @@ const QuoteBtnPage = ({ name }) => {
     <div>
       <a
         href="/contact"
-        className="cursor-pointer bg-blue-600 text-white font-semibold px-7 py-3 rounded-full border-2 border-blue-600 hover:bg-transparent hover:text-blue-600 transition-all duration-300"
+        className="cursor-pointer bg-[#025c9e] text-white font-semibold px-7 py-3 rounded-full border-2 border-[#025c9e] hover:bg-transparent hover:text-[#025c9e] transition-all duration-300"
       >
         {name}
       </a>
