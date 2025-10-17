@@ -6,7 +6,7 @@ const BreadCrum = ({ exPage, HomePage, MultipleColor }) => {
         <div className="container flex gap-2 pb-20 text-sm">
             <Link to="/" className={`hover:underline ${MultipleColor}`}>{HomePage}</Link>
             <span>/</span>
-            <p className="paragraph">{exPage}</p>
+            <p className="paragraph text-gray-500">{exPage}</p>
         </div>
     )
 }

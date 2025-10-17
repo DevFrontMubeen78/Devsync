@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const cards = [
   {
@@ -32,40 +32,60 @@ const cards = [
 ];
 
 const WhySolveIT = () => {
+  const [activeCard, setActiveCard] = useState(null);
+
+  const handleCardClick = (id) => {
+    // Toggle on mobile tap
+    if (window.innerWidth < 768) {
+      setActiveCard(activeCard === id ? null : id);
+    }
+  };
+
   return (
     <div className="container">
-      {/* Heading */}
-      <h1 className="heading mb-16">
-        Why Solve IT
-      </h1>
+      <h1 className="heading mb-16">Why Solve IT</h1>
 
-      {/* Cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
         {cards.map((card) => (
           <div
             key={card.id}
-            className="group relative h-[350px] rounded-[25px] overflow-hidden shadow-lg cursor-pointer border border-white/10 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${card.image})`,
-            }}
+            onClick={() => handleCardClick(card.id)}
+            className={`group relative h-[350px] rounded-[25px] overflow-hidden shadow-lg cursor-pointer border border-white/10 bg-cover bg-center transition-all duration-500`}
+            style={{ backgroundImage: `url(${card.image})` }}
           >
             {/* Overlay */}
             <div className="absolute inset-0 transition-all duration-500"></div>
 
             {/* Content */}
             <div className="absolute inset-0 flex flex-col justify-end p-6 z-10">
-              {/* Title block (bottom by default) */}
-              <div className="transition-all duration-700 ease-in-out group-hover:translate-y-[-100px] mb-4">
+              {/* Title */}
+              <div
+                className={`transition-all duration-700 ease-in-out mb-4 
+                ${
+                  activeCard === card.id
+                    ? "-translate-y-[100px]"
+                    : "translate-y-0"
+                } 
+                group-hover:-translate-y-[100px]`}
+              >
                 <h1 className="text-6xl font-extrabold leading-none mb-2">
                   {card.number}
                 </h1>
                 <h2 className="text-xl font-bold">{card.title}</h2>
               </div>
 
-              {/* Hidden List — animates from bottom to top on hover */}
-              <ul className="absolute bottom-0 left-0 w-full p-6 space-y-2 text-lg opacity-0 translate-y-[80px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-in-out">
+              {/* Points */}
+              <ul
+                className={`absolute bottom-0 left-0 w-full p-6 space-y-2 text-lg transition-all duration-700 ease-in-out 
+                ${
+                  activeCard === card.id
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-[80px]"
+                } 
+                group-hover:opacity-100 group-hover:translate-y-0`}
+              >
                 {card.points.map((point, i) => (
-                  <li className="list" key={i}>{point}</li>
+                  <li key={i}>{point}</li>
                 ))}
               </ul>
             </div>

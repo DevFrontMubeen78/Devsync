@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg_section py-4 sm:py-6 pt-12 pb-6">
+    <footer className="bg_section py-10">
       <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
         {/* RESOURCES */}
