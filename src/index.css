@@ -4,7 +4,7 @@
 body {
   /* background: #2b2b33; */
   /* color: #fff !important */
-  color: #000 !important
+  color: #000 !important;
 }
 
 .heading {
@@ -22,12 +22,14 @@ body {
 }
 
 .paragraph {
-  font-size: 16px;
+  font-size: 17px;
 }
 
-.list {
-  font-size: 15px;
+.bgParagraph, .list {
+  font-size: 16px;
+  color: #c4c3c3 !important;
 }
+
 
 .bg_section {
   background-color: #1f2b2f;

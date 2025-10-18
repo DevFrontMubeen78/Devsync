@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 const BreadCrum = ({ exPage, HomePage, MultipleColor }) => {
     return (
-        <div className="container flex gap-2 pb-20 text-sm">
+        <div className="container flex gap-2 text-sm uppercase">
             <Link to="/" className={`hover:underline ${MultipleColor}`}>{HomePage}</Link>
             <span>/</span>
-            <p className="paragraph text-gray-500">{exPage}</p>
+            <p className="text-gray-500">{exPage}</p>
         </div>
     )
 }

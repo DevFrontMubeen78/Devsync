@@ -157,10 +157,10 @@ const Contact = () => {
 
         {/* Name, status & flag */}
         <div className="mt-6">
-          <h3 className="text-lg font-semibold flex items-center justify-center gap-2">
+          <h3 className="text-2xl font-semibold flex items-center justify-center gap-2">
             {testimonials[index].name}
           </h3>
-          <p className="paragraph flex items-center justify-center gap-2">
+          <p className="bgParagraph flex items-center justify-center gap-2">
             {testimonials[index].status} {testimonials[index].country}
           </p>
         </div>

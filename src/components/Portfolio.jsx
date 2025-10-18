@@ -123,8 +123,7 @@ const Portfolio = ({ limit, showButton = false }) => {
             <h2 className="bgHeading uppercase">
                 Portfolio
             </h2>
-            <div className="flex flex-col gap-14">
-                <div className="space-y-10">
+            <div className="flex flex-col md:gap-20 gap-16">
                     {dataToShow.map((item) => (
                         <a
                             key={item.id}
@@ -138,33 +137,33 @@ const Portfolio = ({ limit, showButton = false }) => {
                             ></div>
 
                             {/* Right Side Content */}
-                            <div className="md:w-1/2 md:p-8 p-4 flex flex-col justify-between">
-                                <div>
-                                    <p className="paragraph inline-block px-5 py-1 bg-[#2e3b40] text-sm uppercase rounded-full mb-4">
+                            <div className="md:w-1/2 md:p-8 p-4 flex flex-col gap-6 justify-between">
+                                <div className="">
+                                    <p className="inline-block px-5 py-1 bg-[#5b696f] text-sm rounded-full mb-4">
                                         {item.tag}
                                     </p>
 
                                     <h3 className="text-xl md:text-2xl font-bold mb-6 uppercase">
                                         {item.title}
                                     </h3>
+                                </div>
 
-                                    <div className="grid grid-cols-2 gap-6 text-sm md:text-base">
-                                        <div className="flex flex-col gap-2">
-                                            <h4 className="font-semibold text-lg text-gray-400">Category</h4>
-                                            <p className="paragraph">{item.category}</p>
-                                        </div>
-                                        <div className="flex flex-col gap-2">
-                                            <h4 className="font-semibold text-lg text-gray-400">Type</h4>
-                                            <p className="paragraph">{item.type}</p>
-                                        </div>
-                                        <div className="flex flex-col gap-2">
-                                            <h4 className="font-semibold text-lg text-gray-400">Service</h4>
-                                            <p className="paragraph">{item.service}</p>
-                                        </div>
-                                        <div className="flex flex-col gap-2">
-                                            <h4 className="font-semibold text-lg text-gray-400">Result</h4>
-                                            <p className="paragraph">{item.result}</p>
-                                        </div>
+                                <div className="grid grid-cols-2 gap-10 text-sm md:text-base">
+                                    <div className="flex flex-col gap-2">
+                                        <h4 className="font-semibold text-lg uppercase">Category</h4>
+                                        <p className="bgParagraph">{item.category}</p>
+                                    </div>
+                                    <div className="flex flex-col gap-2">
+                                        <h4 className="font-semibold text-lg uppercase">Type</h4>
+                                        <p className="bgParagraph">{item.type}</p>
+                                    </div>
+                                    <div className="flex flex-col gap-2">
+                                        <h4 className="font-semibold text-lg uppercase">Service</h4>
+                                        <p className="bgParagraph">{item.service}</p>
+                                    </div>
+                                    <div className="flex flex-col gap-2">
+                                        <h4 className="font-semibold text-lg uppercase">Result</h4>
+                                        <p className="bgParagraph">{item.result}</p>
                                     </div>
                                 </div>
 
@@ -184,7 +183,6 @@ const Portfolio = ({ limit, showButton = false }) => {
                     <ViewButton extraClass="border-white text-white" name="explore more our work" link="/portfolio" />
                 )}
             </div>
-        </div>
     );
 };
 

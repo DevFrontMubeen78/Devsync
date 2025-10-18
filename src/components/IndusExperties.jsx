@@ -32,15 +32,15 @@ const IndusExperties = () => {
                 {expertiseData.map((item, index) => (
                     <div
                         key={index}
-                        className="flex flex-col md:flex-row md:items-center items-start justify-start gap-3 text-left"
+                        className="flex flex-col md:flex-row md:items-center items-start justify-start gap-5 text-left"
                     >
                         <img
                             src={item.icon}
                             alt={item.text}
-                            className="w-16 h-16 object-contain"
+                            className="md:w-16 md:h-16 w-10 h-10 object-contain"
                             onError={(e) => (e.target.style.display = 'none')}
                         />
-                        <span className="paragraph text-left">{item.text}</span>
+                        <span className="font-semibold md:text-lg text-sm uppercase text-left">{item.text}</span>
                     </div>
                 ))}
             </div>

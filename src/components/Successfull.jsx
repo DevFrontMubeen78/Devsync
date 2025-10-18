@@ -47,7 +47,7 @@ const Successfull = () => {
               {Math.floor(counts[index])}
               {counter.suffix}
             </h2>
-            <p className="paragraph mt-1">{counter.label}</p>
+            <p className="bgParagraph mt-1">{counter.label}</p>
           </div>
         ))}
       </div>

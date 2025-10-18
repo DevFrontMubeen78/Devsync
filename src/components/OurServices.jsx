@@ -137,7 +137,7 @@ const OurServices = () => {
             className="bg-[#26363b] p-6 rounded-2xl shadow-md border border-gray-700"
           >
             {/* Heading */}
-            <h2 className="text-xl font-bold mb-2">{service.title}</h2>
+            <h2 className="uppercase text-2xl font-bold mb-2">{service.title}</h2>
 
             {/* Border bottom */}
             <div className="border-b border-gray-500 mb-3"></div>
@@ -153,7 +153,7 @@ const OurServices = () => {
                 <li key={i} className="list flex items-center gap-2">
                   <a
                     href={link.url}
-                    className="text-gray-200 underline-offset-2"
+                    className="list underline-offset-2"
                   >
                     {link.name}
                   </a>

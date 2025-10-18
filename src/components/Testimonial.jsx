@@ -85,7 +85,7 @@ const Testimonial = () => {
                   {item.name} <span>{item.country}</span>
                 </h3>
                 {/* ✅ Global paragraph class instead of text-gray-400 */}
-                <p className="paragraph">{item.title}</p>
+                <p className="bgParagraph">{item.title}</p>
               </div>
             </div>
 
