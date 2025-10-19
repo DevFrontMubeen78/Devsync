@@ -1,6 +1,12 @@
-@import "tailwindcss";
+/* =====================
+   GOOGLE FONT + TAILWIND
+===================== */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
 
+/* =====================
+   GLOBAL STYLES
+===================== */
 body,
 .text_one,
 .text_two,
@@ -8,7 +14,6 @@ body,
 .text_four,
 .text_five {
   font-family: 'Exo 2', sans-serif !important;
-
 }
 
 .bg_section {
@@ -147,12 +152,25 @@ body,
   }
 }
 
+/* =====================
+   ANIMATIONS
+===================== */
+
+/* 🌀 Horizontal Scroll (for TopDev & ImageSlider) */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* 🌀 Horizontal Scroll Left → Right */
 @keyframes scroll-x-right {
   0% {
     transform: translateX(-50%);
   }
-
   100% {
     transform: translateX(0);
   }
@@ -163,10 +181,15 @@ body,
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-50%);
   }
+}
+
+/* ✅ Universal Animate Scroll */
+.animate-scroll {
+  display: flex;
+  animation: scroll 25s linear infinite;
 }
 
 .animate-scroll-x-right {
@@ -179,12 +202,11 @@ body,
   animation: scroll-x-left 25s linear infinite;
 }
 
-/* 🟣 Vertical Scroll for desktop */
+/* 🟣 Vertical Scroll (for TechStack desktop sliders) */
 @keyframes scrollY-down {
   0% {
     transform: translateY(0);
   }
-
   100% {
     transform: translateY(-50%);
   }
@@ -194,7 +216,6 @@ body,
   0% {
     transform: translateY(-50%);
   }
-
   100% {
     transform: translateY(0);
   }
@@ -210,4 +231,8 @@ body,
   display: flex;
   flex-direction: column;
   animation: scrollY-up 100s linear infinite;
+}
+
+.group:hover .animate-scroll {
+  animation-play-state: paused;
 }
