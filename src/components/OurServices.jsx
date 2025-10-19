@@ -128,7 +128,7 @@ const OurServices = () => {
 
   return (
     <div className="container flex flex-col gap-10">
-      <h1 className="bgHeading">Our Services</h1>
+      <h1 className="text_two color_two">Our Services</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
@@ -137,20 +137,20 @@ const OurServices = () => {
             className="bg-[#26363b] p-6 rounded-2xl shadow-md border border-gray-700"
           >
             {/* Heading */}
-            <h2 className="uppercase text-2xl font-bold mb-2">{service.title}</h2>
+            <h2 className="text_three color_two mb-2">{service.title}</h2>
 
             {/* Border bottom */}
             <div className="border-b border-gray-500 mb-3"></div>
 
             {/* Paragraph */}
-            <p className="paragraph mb-4">
+            <p className="text_four mb-4">
               {service.description}
             </p>
 
             {/* Links List */}
             <ul className="space-y-2">
               {service.links.map((link, i) => (
-                <li key={i} className="list flex items-center gap-2">
+                <li key={i} className="text_five color_four flex items-center gap-2">
                   <a
                     href={link.url}
                     className="list underline-offset-2"

@@ -61,7 +61,7 @@ const Testimonial = () => {
 
   return (
     <div className="container">
-      <h2 className="bgHeading mb-12">
+      <h2 className="text_two color_two mb-12">
         Clients are saying
       </h2>
 
@@ -81,20 +81,20 @@ const Testimonial = () => {
                 onError={(e) => (e.target.style.display = 'none')}
               />
               <div>
-                <h3 className="text-lg font-semibold flex items-center gap-2">
+                <h3 className="text_three flex items-center gap-2">
                   {item.name} <span>{item.country}</span>
                 </h3>
                 {/* ✅ Global paragraph class instead of text-gray-400 */}
-                <p className="bgParagraph">{item.title}</p>
+                <p className="text_five color_four">{item.title}</p>
               </div>
             </div>
 
             {/* ✅ Review Text */}
-            <p className="paragraph italic mb-4">“{item.review}”</p>
+            <p className="text_four italic mb-4">“{item.review}”</p>
 
             {/* ✅ Star Ratings + Score */}
             <div className="flex items-center gap-2">
-              <span className="text-yellow-400 text-lg font-semibold">
+              <span className="text-yellow-400 text_four">
                 {item.rating.toFixed(1)}
               </span>
               <div className="flex">

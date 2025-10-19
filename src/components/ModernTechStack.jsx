@@ -23,7 +23,7 @@ const ModernTechStack = () => {
     <div className="container container_hide overflow-hidden">
       <div className="flex flex-col md:flex-row justify-between items-start gap-10">
         {/* Left Heading */}
-        <h2 className="bgHeading md:py-20 py-10 md:px-0 px-5 md:w-1/3">
+        <h2 className="text_two color_two md:py-20 py-10 md:px-0 px-5 md:w-1/3">
           Tech Stack
           <br />
           Modern

@@ -7,7 +7,7 @@ const Footer = () => {
 
         {/* RESOURCES */}
         <div className="space-y-6">
-          <h6 className="text-sm text-white font-medium">RESOURCES</h6>
+          <h6 className="text_four color_two">RESOURCES</h6>
           <ul className="space-y-3">
             {[
               "Graphic Design Tools",
@@ -17,7 +17,7 @@ const Footer = () => {
               <li key={index} className="list">
                 <a
                   href="#"
-                  className="hover:text-white"
+                  className="text_five color_three"
                 >
                   {item}
                 </a>
@@ -28,7 +28,7 @@ const Footer = () => {
 
         {/* HELPFUL LINKS */}
         <div className="space-y-6">
-          <h6 className="text-sm text-white font-medium">HELPFUL LINKS</h6>
+          <h6 className="text_four color_two">HELPFUL LINKS</h6>
           <ul className="space-y-3">
             {[
               "Subscription Plans",
@@ -38,7 +38,7 @@ const Footer = () => {
               <li key={index} className="list">
                 <a
                   href="#"
-                  className="hover:text-white"
+                  className="text_five color_three"
                 >
                   {item}
                 </a>
@@ -49,7 +49,7 @@ const Footer = () => {
 
         {/* POLICIES */}
         <div className="space-y-6">
-          <h6 className="text-sm text-white font-medium">POLICIES</h6>
+          <h6 className="text_four color_two">POLICIES</h6>
           <ul className="space-y-3">
             {[
               "Terms & Conditions",
@@ -59,7 +59,7 @@ const Footer = () => {
               <li key={index} className="list">
                 <a
                   href="#"
-                  className="hover:text-white"
+                  className="text_five color_three"
                 >
                   {item}
                 </a>
@@ -70,7 +70,7 @@ const Footer = () => {
 
         {/* SOCIAL MEDIA */}
         <div className="space-y-6">
-          <h6 className="text-sm text-white font-medium">SOCIAL MEDIA</h6>
+          <h6 className="text_four color_two">SOCIAL MEDIA</h6>
           <ul className="flex space-x-4">
             <li className="list">
               <a href="#">

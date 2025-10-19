@@ -25,7 +25,7 @@ const Home = () => {
           {/* Heading Section */}
           <div className="text-left">
             <div className="flex items-center gap-4 sm:gap-6 lg:gap-10 flex-wrap">
-              <h1 className="uppercase text-4xl lg:text-6xl xl:text-7xl md:text-5xl font-extrabold leading-tight">
+              <h1 className="text_one color_one">
                 We build
               </h1>
               <img
@@ -34,14 +34,14 @@ const Home = () => {
                 alt="Sticker"
               />
             </div>
-            <h1 className="uppercase text-4xl lg:text-6xl xl:text-7xl md:text-5xl font-extrabold leading-tight">
+            <h1 className="text_one color_one">
               mobile and web apps
             </h1>
           </div>
 
           {/* Description + Buttons */}
           <div className="w-full flex flex-col xl:flex-row xl:items-center xl:justify-between gap-6">
-            <p className="text-base sm:text-lg max-w-2xl leading-relaxed text-left">
+            <p className="text_four color_three">
               For startups, SMEs, and enterprises. Business-results oriented & AI-powered 🚀
             </p>
             <div className="hidden lg:flex gap-6 items-center">

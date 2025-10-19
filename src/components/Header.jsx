@@ -37,16 +37,16 @@ const Header = () => {
         <div className="col-span-9 flex justify-end items-center">
           <ul className="hidden lg:flex items-center gap-8">
             <li className="list">
-              <a href="/expertise" className="font-medium hover:text-[#025c9e] text-md">Expertise</a>
+              <a href="/expertise" className="text_five color_three uppercase">Expertise</a>
             </li>
             <li className="list">
-              <a href="/services" className="font-medium hover:text-[#025c9e] text-md">Services</a>
+              <a href="/services" className="text_five color_three uppercase">Services</a>
             </li>
             <li className="list">
-              <a href="/about" className="font-medium hover:text-[#025c9e] text-md">About Us</a>
+              <a href="/about" className="text_five color_three uppercase">About Us</a>
             </li>
             <li className="list">
-              <a href="/portfolio" className="font-medium hover:text-[#025c9e] text-md">Portfolio</a>
+              <a href="/portfolio" className="text_five color_three uppercase">Portfolio</a>
             </li>
             <li className="list"><GetAQuote name="Get A Quote" /></li>
           </ul>

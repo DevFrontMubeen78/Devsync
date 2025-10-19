@@ -43,7 +43,7 @@ const WhySolveIT = () => {
 
   return (
     <div className="container">
-      <h1 className="heading mb-16">Why Solve IT</h1>
+      <h1 className="text_two color_one mb-16">Why Solve IT</h1>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
         {cards.map((card) => (
@@ -68,15 +68,15 @@ const WhySolveIT = () => {
                 } 
                 group-hover:-translate-y-[100px]`}
               >
-                <h1 className="text-6xl font-extrabold leading-none mb-2">
+                <h1 className="text_one color_one mb-2">
                   {card.number}
                 </h1>
-                <h2 className="text-xl font-bold">{card.title}</h2>
+                <h2 className="text_three color_one">{card.title}</h2>
               </div>
 
               {/* Points */}
               <ul
-                className={`absolute bottom-0 left-0 w-full p-6 space-y-2 text-lg transition-all duration-700 ease-in-out 
+                className={`absolute bottom-0 left-0 w-full p-6 space-y-2 text_four color_three transition-all duration-700 ease-in-out 
                 ${
                   activeCard === card.id
                     ? "opacity-100 translate-y-0"

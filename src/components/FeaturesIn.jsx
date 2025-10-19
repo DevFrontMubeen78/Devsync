@@ -11,7 +11,7 @@ const logo = [
 const FeaturesIn = () => {
   return (
       <div className="container flex flex-col gap-10">
-        <h1 className='heading'>Features In</h1>
+        <h1 className='text_two color_one'>Features In</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-8 sm:gap-10 md:gap-12 xl:gap-16 items-center">
           {logo.map((item, index) => (
             <img

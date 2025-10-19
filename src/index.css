@@ -1,49 +1,66 @@
 @import "tailwindcss";
 
-
-body {
-  /* background: #2b2b33; */
-  /* color: #fff !important */
-  color: #000 !important;
-}
-
-.heading {
-  color: #000 !important;
-  font-size: 48px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.bgHeading {
-  color: #fff !important;
-  font-size: 48px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.paragraph {
-  font-size: 17px;
-}
-
-.bgParagraph, .list {
-  font-size: 16px;
-  color: #c4c3c3 !important;
-}
-
-
 .bg_section {
   background-color: #1f2b2f;
   color: #fff !important;
-}
-
-.paddingY-axis {
-  padding: 100px 0px;
 }
 
 .container {
   position: relative;
   width: 85%;
   margin: 0px auto;
+}
+
+.paddingY-axis {
+  padding: 100px 0px;
+}
+
+.text_one {
+  font-size: 80px;
+  line-height: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.text_two {
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.text_three {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.text_four {
+  font-size: 17px;
+  line-height: 24px;
+  line-height: 24px;
+}
+
+.text_five {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.color_one {
+  color: #000 !important;
+}
+
+.color_two {
+  color: #fff !important;
+}
+
+.color_three {
+  color: #848586 !important;
+}
+
+.color_four {
+  color: #b7b8b9 !important;
 }
 
 @media (max-width : 1200px) {
@@ -54,16 +71,40 @@ body {
   .paddingY-axis {
     padding: 50px 0px;
   }
+
+  .text_one {
+    font-size: 70px;
+  }
+
+  .text_two {
+    font-size: 44px;
+  }
+
 }
 
 @media (max-width : 1024px) {
   .heading {
     font-size: 38px;
+    line-height: 24px;
   }
 
   .bgHeading {
     font-size: 38px;
+    line-height: 24px;
   }
+
+  .text_one {
+    font-size: 64px;
+  }
+
+  .text_two {
+    font-size: 40px;
+  }
+
+  .text_three {
+    font-size: 20px;
+  }
+
 }
 
 @media (max-width : 767.98px) {
@@ -79,14 +120,15 @@ body {
     width: 100% !important;
   }
 
-  .heading {
-    font-size: 32px;
+  .text_one {
+    font-size: 40px;
   }
 
-  .bgHeading {
+  .text_two {
     font-size: 32px;
+    line-height: 40px;
   }
-  
+
 }
 
 

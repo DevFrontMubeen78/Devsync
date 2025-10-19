@@ -56,8 +56,8 @@ const ServeRevi = () => {
         <div className="container w-full flex flex-col lg:flex-row items-start justify-start gap-14">
             {/* Left Section */}
             <div className="w-full lg:w-1/2 text lg:text-left flex flex-col gap-6">
-                <h2 className="heading">Services</h2>
-                <p className="paragraph">
+                <h2 className="text_two color_one">Services</h2>
+                <p className="text_four color_three">
                     Each review reflects our dedication to quality and excellence. Hear what our clients have to say about our work, communication, and reliability. Each review reflects our dedication to quality and excellence.
                     Hear what our clients have to say about our work, communication, and reliability. Each review reflects our dedication to quality and excellence.
                 </p>
@@ -81,8 +81,8 @@ const ServeRevi = () => {
                                 <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg_section p-5 rounded">
                                     {/* Left */}
                                     <div className="md:w-1/2 w-full">
-                                        <h3 className="headingColor font-semibold mb-2">{review.title}</h3>
-                                        <p className="bgParagraph mb-3">{review.text}</p>
+                                        <h3 className="text_three color_two mb-2">{review.title}</h3>
+                                        <p className="text_five color_four mb-3">{review.text}</p>
                                         <span className="bgParagraph">{review.date}</span>
                                     </div>
 

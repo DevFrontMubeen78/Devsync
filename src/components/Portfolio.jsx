@@ -120,7 +120,7 @@ const Portfolio = ({ limit, showButton = false }) => {
 
     return (
         <div className="container flex flex-col gap-10">
-            <h2 className="bgHeading uppercase">
+            <h2 className="text_two color_two">
                 Portfolio
             </h2>
             <div className="flex flex-col md:gap-20 gap-16">
@@ -143,27 +143,27 @@ const Portfolio = ({ limit, showButton = false }) => {
                                         {item.tag}
                                     </p>
 
-                                    <h3 className="text-xl md:text-2xl font-bold mb-6 uppercase">
+                                    <h3 className="text_three color_two mb-6">
                                         {item.title}
                                     </h3>
                                 </div>
 
                                 <div className="grid grid-cols-2 gap-10 text-sm md:text-base">
                                     <div className="flex flex-col gap-2">
-                                        <h4 className="font-semibold text-lg uppercase">Category</h4>
-                                        <p className="bgParagraph">{item.category}</p>
+                                        <h4 className="text_four">Category</h4>
+                                        <p className="text_five color_four">{item.category}</p>
                                     </div>
                                     <div className="flex flex-col gap-2">
-                                        <h4 className="font-semibold text-lg uppercase">Type</h4>
-                                        <p className="bgParagraph">{item.type}</p>
+                                        <h4 className="text_four">Type</h4>
+                                        <p className="text_five color_four">{item.type}</p>
                                     </div>
                                     <div className="flex flex-col gap-2">
-                                        <h4 className="font-semibold text-lg uppercase">Service</h4>
-                                        <p className="bgParagraph">{item.service}</p>
+                                        <h4 className="text_four">Service</h4>
+                                        <p className="text_five color_four">{item.service}</p>
                                     </div>
                                     <div className="flex flex-col gap-2">
-                                        <h4 className="font-semibold text-lg uppercase">Result</h4>
-                                        <p className="bgParagraph">{item.result}</p>
+                                        <h4 className="text_four">Result</h4>
+                                        <p className="text_five color_four">{item.result}</p>
                                     </div>
                                 </div>
 

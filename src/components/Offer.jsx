@@ -50,7 +50,7 @@ const Offer = () => {
         {/* Left Column: Heading + First Column Cards */}
         <div>
           {/* Heading */}
-          <h1 className="heading mb-10">
+          <h1 className="text_two color_one mb-10">
             What we offer
           </h1>
 
@@ -67,11 +67,10 @@ const Offer = () => {
                     href={card.link}
                     key={actualIndex}
                     onMouseEnter={() => setActiveIndex(actualIndex)}
-                    className={`group block transition-all duration-500 p-8 rounded-[50px] cursor-pointer no-underline ${
-                      isActive
+                    className={`group block transition-all duration-500 p-8 rounded-[50px] cursor-pointer no-underline ${isActive
                         ? "bg-[#1f2b2f] text-white"
                         : "bg-[#f4f5f6] text-[#1f2b2f] hover:bg-[#1f2b2f] hover:text-white"
-                    }`}
+                      }`}
                   >
                     {/* Top Row: Icon + Arrow */}
                     <div className="flex items-center justify-between mb-6">
@@ -81,25 +80,23 @@ const Offer = () => {
                         className="w-16 h-16 transition-all duration-500"
                       />
                       <div
-                        className={`flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-500 opacity-0 ${
-                          isActive
+                        className={`flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-500 opacity-0 ${isActive
                             ? "opacity-100 border-white bg-white/10"
                             : "group-hover:opacity-100 border-[#1f2b2f] group-hover:border-white group-hover:bg-white/10"
-                        }`}
+                          }`}
                       >
                         <ArrowRight
-                          className={`w-5 h-5 transition-all duration-500 ${
-                            isActive
+                          className={`w-5 h-5 transition-all duration-500 ${isActive
                               ? "text-white"
                               : "text-[#1f2b2f] group-hover:text-white"
-                          }`}
+                            }`}
                         />
                       </div>
                     </div>
 
-                    <h3 className="text-2xl font-semibold mb-3">{card.title}</h3>
+                    <h3 className="text_three mb-3">{card.title}</h3>
                     {/* ✅ Global paragraph class used here */}
-                    <p className="paragraph">{card.desc}</p>
+                    <p className="text_four">{card.desc}</p>
                   </a>
                 );
               })}
@@ -119,11 +116,10 @@ const Offer = () => {
                   href={card.link}
                   key={actualIndex}
                   onMouseEnter={() => setActiveIndex(actualIndex)}
-                  className={`group block transition-all duration-500 p-8 rounded-[50px] cursor-pointer no-underline ${
-                    isActive
+                  className={`group block transition-all duration-500 p-8 rounded-[50px] cursor-pointer no-underline ${isActive
                       ? "bg-[#1f2b2f] text-white"
-                      : "bg-[#f4f5f6] text-[#1f2b2f] hover:bg-[#1f2b2f] hover:text-white"
-                  }`}
+                      : "bg-[#f5f8fb] text-[#1f2b2f] hover:bg-[#1f2b2f] hover:text-white"
+                    }`}
                 >
                   <div className="flex items-center justify-between mb-6">
                     <img
@@ -132,25 +128,23 @@ const Offer = () => {
                       className="w-16 h-16 transition-all duration-500"
                     />
                     <div
-                      className={`flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-500 opacity-0 ${
-                        isActive
+                      className={`flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-500 opacity-0 ${isActive
                           ? "opacity-100 border-white bg-white/10"
                           : "group-hover:opacity-100 border-[#1f2b2f] group-hover:border-white group-hover:bg-white/10"
-                      }`}
+                        }`}
                     >
                       <ArrowRight
-                        className={`w-5 h-5 transition-all duration-500 ${
-                          isActive
+                        className={`w-5 h-5 transition-all duration-500 ${isActive
                             ? "text-white"
                             : "text-[#1f2b2f] group-hover:text-white"
-                        }`}
+                          }`}
                       />
                     </div>
                   </div>
 
-                  <h3 className="text-2xl font-semibold mb-3">{card.title}</h3>
+                  <h3 className="text_three mb-3">{card.title}</h3>
                   {/* ✅ Global paragraph class used here */}
-                  <p className="paragraph">{card.desc}</p>
+                  <p className="text_four">{card.desc}</p>
                 </a>
               );
             })}

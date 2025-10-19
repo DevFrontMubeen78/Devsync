@@ -57,7 +57,7 @@ const cards = [
 function TechExpert() {
   return (
     <section className="container flex flex-col gap-20">
-      <h2 className="text-2xl md:text-5xl font-extrabold text-center md:text-left uppercase mb-12">
+      <h2 className="text_two color_two mb-12">
         Industry-specific Software
       </h2>
 
@@ -76,14 +76,14 @@ function TechExpert() {
             </div>
 
             <div className="mt-12 flex flex-col gap-4">
-              <h3 className="text-2xl font-semibold mb-2">{card.title}</h3>
+              <h3 className="text_three color_two mb-2">{card.title}</h3>
 
               {/* Paragraph updated */}
-              <p className="paragraph mb-4">{card.desc}</p>
+              <p className="text_four color_two mb-4">{card.desc}</p>
 
               <ul className="space-y-1 mb-4">
                 {card.features.map((f, i) => (
-                  <li key={i} className="flex items-center gap-2 list">
+                  <li key={i} className="flex items-center gap-2 text_five color_four">
                     <span className="inline-block w-4">/</span>
                     <span>{f}</span>
                   </li>
