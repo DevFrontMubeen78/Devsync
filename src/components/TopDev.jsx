@@ -11,7 +11,7 @@ const logos = [
 
 const TopDev = () => {
   return (
-    <div className="container flex flex-col gap-10 overflow-hidden">
+    <div className="container flex flex-col md:gap-20 gap-14 overflow-hidden">
       {/* ✅ Heading follows same global typography structure */}
       <h1 className="text_two color_one">
         Among The Top App <br className="inline" />

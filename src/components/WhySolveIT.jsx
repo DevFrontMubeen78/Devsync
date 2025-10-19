@@ -60,7 +60,7 @@ const WhySolveIT = () => {
             <div className="absolute inset-0 flex flex-col justify-end p-6 z-10">
               {/* Title */}
               <div
-                className={`transition-all duration-700 ease-in-out mb-4 
+                className={`flex flex-col gap-2 transition-all duration-700 ease-in-out mb-4 
                 ${
                   activeCard === card.id
                     ? "-translate-y-[100px]"
