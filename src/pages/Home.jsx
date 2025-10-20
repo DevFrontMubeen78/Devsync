@@ -40,15 +40,16 @@ const Home = () => {
           </div>
 
           {/* Description + Buttons */}
-          <div className="w-full flex flex-col xl:flex-row xl:items-center xl:justify-between gap-6">
+          <div className="w-full flex flex-wrap items-center justify-between gap-6">
             <p className="text_four color_three">
               For startups, SMEs, and enterprises. Business-results oriented & AI-powered 🚀
             </p>
-            <div className="hidden lg:flex gap-6 items-center">
+            <div className="flex md:gap-6 gap-4 items-center">
               <GetAQuote name="Get A Quote" />
               <ViewButton name="Portfolio" link="/portfolio" />
             </div>
           </div>
+
         </div>
 
         <ImageSlider />

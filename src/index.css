@@ -1,7 +1,23 @@
 /* =====================
+   LOCAL CUSTOM FONT
+===================== */
+@font-face {
+  font-family: 'ClashDisplay';
+  src: url('/fonts/ClashDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* =====================
    GOOGLE FONT + TAILWIND
 ===================== */
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 /* =====================
@@ -9,11 +25,14 @@
 ===================== */
 body,
 .text_one,
-.text_two,
+.text_two {
+  font-family: 'ClashDisplay', sans-serif !important;
+}
+body,
 .text_three,
 .text_four,
 .text_five {
-  font-family: 'Exo 2', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 .bg_section {
@@ -28,36 +47,36 @@ body,
 }
 
 .paddingY-axis {
-  padding: 100px 0;
+  padding: 80px 0;
 }
 
 /* =====================
    TEXT STYLES
 ===================== */
 .text_one {
-  font-size: 80px;
-  line-height: 50px;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-size: 84px;
+  line-height: 60px;
+  letter-spacing: 3px;
+  font-weight: 700;
 }
 
 .text_two {
-  font-size: 48px;
-  line-height: 50px;
-  font-weight: 800;
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 .text_three {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 24px;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
 .text_four {
   font-size: 17px;
   line-height: 24px;
+  font-weight: 500;
 }
 
 .text_five {
@@ -69,7 +88,7 @@ body,
    COLORS
 ===================== */
 .color_one {
-  color: #000 !important;
+  color: #1e2a2e !important;
 }
 
 .color_two {
@@ -77,11 +96,11 @@ body,
 }
 
 .color_three {
-  color: #848586 !important;
+  color: #1e2a2e !important;
 }
 
 .color_four {
-  color: #b7b8b9 !important;
+  color: #ccc !important;
 }
 
 /* =====================
@@ -150,6 +169,14 @@ body,
     font-size: 32px;
     line-height: 40px;
   }
+
+  .text_four {
+    font-size: 15px;
+  }
+
+  .text_five {
+    font-size: 13px;
+  }
 }
 
 /* =====================
@@ -161,6 +188,7 @@ body,
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -171,6 +199,7 @@ body,
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -181,6 +210,7 @@ body,
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -207,6 +237,7 @@ body,
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-50%);
   }
@@ -216,6 +247,7 @@ body,
   0% {
     transform: translateY(-50%);
   }
+
   100% {
     transform: translateY(0);
   }

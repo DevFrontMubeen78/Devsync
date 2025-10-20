@@ -17,7 +17,7 @@ const Footer = () => {
               <li key={index} className="list">
                 <a
                   href="#"
-                  className="text_five color_three"
+                  className="text_five color_four"
                 >
                   {item}
                 </a>
@@ -38,7 +38,7 @@ const Footer = () => {
               <li key={index} className="list">
                 <a
                   href="#"
-                  className="text_five color_three"
+                  className="text_five color_four"
                 >
                   {item}
                 </a>
@@ -59,7 +59,7 @@ const Footer = () => {
               <li key={index} className="list">
                 <a
                   href="#"
-                  className="text_five color_three"
+                  className="text_five color_four"
                 >
                   {item}
                 </a>
