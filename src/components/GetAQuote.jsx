@@ -13,7 +13,7 @@ const GetAQuote = ({ name }) => {
     <div>
       <button
         onClick={handleScroll}
-        className="cursor-pointer bg-[#025c9e] text-white font-semibold md:px-7 px-3 py-3 rounded-full border-2 border-[#025c9e] hover:bg-transparent hover:text-[#025c9e] transition-all duration-300"
+        className="cursor-pointer bg-[#025c9e] text-white font-semibold md:px-7 px-5 py-3 rounded-full border-2 border-[#025c9e] hover:bg-transparent hover:text-[#025c9e] transition-all duration-300"
       >
         {name}
       </button>
