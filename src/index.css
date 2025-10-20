@@ -28,6 +28,7 @@ body,
 .text_two {
   font-family: 'ClashDisplay', sans-serif !important;
 }
+
 body,
 .text_three,
 .text_four,
@@ -103,6 +104,10 @@ body,
   color: #ccc !important;
 }
 
+.swiper-wrapper {
+  padding: 5rem 0rem;
+}
+
 /* =====================
    MEDIA QUERIES
 ===================== */
@@ -176,6 +181,10 @@ body,
 
   .text_five {
     font-size: 13px;
+  }
+
+  .swiper-wrapper {
+    padding: 2rem 0rem;
   }
 }
 

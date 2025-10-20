@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
-const ServeRevi = () => {
+const ServeRevi = ({ pageName }) => {
     const reviews = [
         {
             title: "The Review",
@@ -56,7 +56,7 @@ const ServeRevi = () => {
         <div className="container w-full flex flex-col lg:flex-row items-start justify-start gap-14">
             {/* Left Section */}
             <div className="w-full lg:w-1/2 text lg:text-left flex flex-col gap-6">
-                <h2 className="text_two color_one">Services</h2>
+                <h2 className="text_two color_one">{pageName}</h2>
                 <p className="text_four color_three">
                     Each review reflects our dedication to quality and excellence. Hear what our clients have to say about our work, communication, and reliability. Each review reflects our dedication to quality and excellence.
                     Hear what our clients have to say about our work, communication, and reliability. Each review reflects our dedication to quality and excellence.
@@ -90,7 +90,7 @@ const ServeRevi = () => {
                                     <div className="md:w-1/2 w-full">
                                         <div className="flex gap-3 mb-2 items-center">
                                             <div className="font-bold">{review.rating.toFixed(1)}</div>
-                                             <div className="flex">
+                                            <div className="flex">
                                                 {[...Array(5)].map((_, i) => (
                                                     <FaStar key={i} className="text-yellow-400" />
                                                 ))}
