@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -48,6 +48,14 @@ export default function TeamSlider() {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(4);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
+
+  // 🧠 Listen for screen resize
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const nextSlide = () => {
     if (swiperRef.current) swiperRef.current.slideNext();
@@ -60,9 +68,7 @@ export default function TeamSlider() {
   return (
     <div className="container w-full">
       {/* Header */}
-      <div className="flex justify-between items-center mb-6 w-full">
         <h2 className="text_two color_one">Our Team</h2>
-      </div>
 
       {/* Swiper */}
       <Swiper
@@ -77,6 +83,7 @@ export default function TeamSlider() {
         spaceBetween={20}
         breakpoints={{
           320: { slidesPerView: 1 },
+          576: { slidesPerView: 2 },
           768: { slidesPerView: 3 },
           1024: { slidesPerView: 4 },
         }}
@@ -92,7 +99,9 @@ export default function TeamSlider() {
               <div
                 className={`flex flex-col items-center text-center transition-all duration-300 ${
                   isZoomed
-                    ? "scale-110 shadow-2xl bg-white rounded-2xl py-4"
+                    ? `scale-110 ${
+                        isDesktop ? "shadow-2xl" : ""
+                      } bg-white rounded-2xl py-4`
                     : "scale-100"
                 }`}
               >
@@ -101,10 +110,8 @@ export default function TeamSlider() {
                   alt={member.name}
                   className="w-28 h-28 rounded-full mb-3 object-cover"
                 />
-                <h3 className="font-semibold text-gray-800 text-lg">
-                  {member.name}
-                </h3>
-                <p className="text-sm text-gray-500 mb-2">
+                <h3 className="text_three color_one">{member.name}</h3>
+                <p className="text_five color_three mb-2">
                   {member.designation}
                 </p>
                 <div className="flex items-center justify-center gap-3">
@@ -130,7 +137,7 @@ export default function TeamSlider() {
       </Swiper>
 
       {/* Buttons BELOW the slider */}
-      <div className="flex justify-center sm:justify-end gap-4">
+      <div className="flex justify-center sm:justify-end gap-4 mt-4">
         <button
           onClick={prevSlide}
           className="bg_section cursor-pointer p-3 sm:p-4 rounded-full hover:bg-gray-700 transition shadow-md"
