@@ -19,32 +19,35 @@ const TechStack = () => {
     ];
 
     return (
-        <div className="container mx-auto flex flex-col md:gap-16 gap-10">
+        <div className="container mx-auto flex flex-col gap-20">
             {/* Header */}
-            <div className="mb-12 flex flex-col gap-10">
+            <div className="flex flex-col gap-10">
                 <h2 className="text_two color_two">Technology Stack</h2>
 
                 {/* Logos */}
-                <div className="flex flex-wrap justify-between lg:gap-14 md:gap-10 gap-2">
+                <div className="flex flex-wrap justify-between lg:gap-14 md:gap-10 gap-3">
                     {techData.map((tech, index) => (
                         <img
                             key={index}
                             src={tech.logo}
                             alt={`tech-logo-${index}`}
-                            className="lg:w-18 lg:h-18 md:w-14 md:h-14 w-9 h-9 object-contain"
+                            className="lg:w-18 lg:h-18 md:w-14 md:h-14 w-14 h-14 object-contain"
                         />
                     ))}
                 </div>
             </div>
+
             {/* Team Section */}
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
+            <div className="md:mb-0 mb-12 grid lg:grid-cols-2 grid-cols-1 gap-8 items-center">
+                {/* Heading */}
+                <div className="order-1 lg:order-1 order-1 text-left">
                     <h2 className="text_two color_two">
                         50+ in-house <br /> specialists
                     </h2>
                 </div>
 
-                <div className="flex justify-between gap-4 flex-wrap">
+                {/* Boxes */}
+                <div className="order-2 lg:order-2 order-2 flex justify-between gap-4 flex-wrap">
                     {teamData.map((item, i) => (
                         <div
                             key={i}
@@ -56,8 +59,8 @@ const TechStack = () => {
                             >
                                 {item.label}
 
-                                {/* Bottom-right corner ke liye Telegram arrow */}
-                                <Send className="absolute -right-4 w-8 h-8 rotate-120 text-white" />
+                                {/* Arrow - hide on mobile */}
+                                <Send className="absolute -right-4 w-8 h-8 rotate-120 text-white hidden md:block" />
                             </span>
 
                             {/* Corner dots */}
@@ -69,7 +72,6 @@ const TechStack = () => {
                             {item.value && (
                                 <span className="text-2xl md:text-4xl z-0">{item.value}</span>
                             )}
-
                         </div>
                     ))}
                 </div>

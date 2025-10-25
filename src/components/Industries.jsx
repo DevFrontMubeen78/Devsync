@@ -78,7 +78,7 @@ const Industries = () => {
 
         <ul className='flex gap-4 flex-wrap'>
           {industries.map((group, i) => (
-            <div key={i} className="flex flex-col gap-4">
+            <div key={i} className="flex flex-col md:gap-5 gap-2">
               {group.map((item, idx) => (
                 <li key={idx} className='flex items-center gap-2'>
                   <span className='text-[#005da2] font-semibold'>/</span>

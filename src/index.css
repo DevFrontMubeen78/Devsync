@@ -253,44 +253,50 @@ body,
   }
 }
 
-/* Normal animation (Senior & Junior) */
+/* 🌀 Normal animation (Desktop) */
 .animated-label {
   animation: move-around 20s linear infinite;
 }
 
-/* Reverse animation for Middle */
 .reverse-animation {
   animation: move-around 20s linear infinite reverse;
 }
 
-/* Keyframes */
+/* 🔁 Keyframes */
 @keyframes move-around {
   0% {
     top: -4rem;
     left: -6.5rem;
   }
-
   25% {
     top: calc(100% - 4rem);
     left: -2rem;
   }
-
   50% {
     top: calc(100% - 4rem);
     left: calc(100% - 6.5rem);
   }
-
   75% {
     top: -4rem;
     left: calc(100% - 6.5rem);
   }
-
   100% {
     top: -4rem;
     left: -6rem;
   }
 }
 
+/* 📱 Mobile: Stop animation, fix label bottom center */
+@media (max-width: 768px) {
+  .animated-label,
+  .reverse-animation {
+    animation: none !important;
+    top: auto !important;
+    left: 50% !important;
+    bottom: -3rem !important;
+    transform: translateX(-50%) !important;
+  }
+}
 
 
 /* =====================

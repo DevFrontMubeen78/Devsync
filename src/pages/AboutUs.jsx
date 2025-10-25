@@ -6,6 +6,9 @@ import Team from '../components/Team'
 import TechStack from '../components/TechStack'
 import Industries from '../components/Industries'
 import WhyWorkWIthSolve from '../components/WhyWorkWIthSolve'
+import ClientSlider from '../components/ClientSlider'
+import Awards from '../components/Awards'
+import BenifitsDevSync from '../components/BenifitsDevSync'
 
 const AboutUs = () => {
   return (
@@ -28,13 +31,24 @@ const AboutUs = () => {
       </section>
 
       {/* industries section */}
-      <section className=' paddingY-axis'>
+      <section className='paddingY-axis'>
         <Industries />
       </section>
 
       {/* wha work section */}
-      <section className=''>
+      <section className='bg_section paddingY-axis'>
         <WhyWorkWIthSolve />
+      </section>
+
+      {/* ClientSlider section */}
+      <section className='paddingY-axis'>
+        <ClientSlider />
+      </section>
+
+      {/* awards section */}
+      <section className='bg_section paddingY-axis flex flex-col gap-20'>
+        <Awards />
+        <BenifitsDevSync />
       </section>
 
       {/* Contact section */}
