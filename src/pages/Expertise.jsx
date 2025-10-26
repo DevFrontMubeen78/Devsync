@@ -1,22 +1,21 @@
 import React from 'react'
-import TechExpet from "../components/TechExpert"
-import Contact from "../components/Contact"
+import TechExpet from '../components/TechExpert'
+import Contact from '../components/Contact'
 import BreadCrum from '../components/BreadCrum'
 
 const Expertise = () => {
   return (
     <div>
       {/* hero section */}
-      <section className='bg_section paddingY-axis'>
-        <BreadCrum exPage="Expertise" HomePage="Home" MultipleColor="text-white" />
+      <section className="bg_section paddingY-axis">
+        <BreadCrum pages={[{ name: 'Expertise' }]} />
         <TechExpet />
       </section>
 
       {/* Contact section */}
-      <section className='paddingY-axis'>
+      <section className="paddingY-axis">
         <Contact />
       </section>
-
     </div>
   )
 }

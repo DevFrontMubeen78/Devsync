@@ -6,7 +6,7 @@ import BreadCrum from '../components/BreadCrum'
 const ContactUs = () => {
     return (
         <div className='paddingY-axis'>
-            <BreadCrum exPage="Contact" HomePage="Home" MultipleColor="text-black" />
+            <BreadCrum pages={[{ name: 'Contact' }]} />
             <Contact />
         </div>
     )

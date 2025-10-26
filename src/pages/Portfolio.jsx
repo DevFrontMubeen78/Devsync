@@ -7,7 +7,7 @@ const Portfolio = () => {
     <div>
       {/* hero section */}
       <section className='bg_section paddingY-axis'>
-        <BreadCrum exPage="Portfolio" HomePage="Home" MultipleColor="text-white" />
+        <BreadCrum pages={[{ name: 'Portfolio' }]} />
         <Portfolios />
       </section>
     </div>

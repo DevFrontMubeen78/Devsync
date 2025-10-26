@@ -11,6 +11,7 @@ const ContactUs = lazy(() => import("./pages/ContactUs"));
 const Expertise = lazy(() => import("./pages/Expertise"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Services = lazy(() => import("./pages/Services"));
+const Website = lazy(() => import("./pages/portfolio/Website"));
 const NotFound = lazy(() => import("./components/NotFound"));
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/expertise" element={<Expertise />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/portfolio/devsync" element={<Website />} />
             <Route path="*" element={<NotFound />} /> 
           </Routes>
           <Footer />

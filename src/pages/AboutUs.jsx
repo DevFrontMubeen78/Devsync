@@ -15,47 +15,46 @@ const AboutUs = () => {
     <div>
       {/* hero section */}
       <section className="paddingY-axis bg-[url('/img/noise2.png')] bg-cover bg-center bg-no-repeat">
-        <BreadCrum exPage="About Us" HomePage="Home" />
+        <BreadCrum pages={[{ name: 'About' }]} />
+
         <ServeRevi pageName="About Us" />
       </section>
 
-
       {/* Team section */}
-      <section className='paddingY-axis'>
+      <section className="paddingY-axis">
         <Team />
       </section>
 
       {/* Teck Stack section */}
-      <section className='bg_section paddingY-axis'>
+      <section className="bg_section paddingY-axis">
         <TechStack />
       </section>
 
       {/* industries section */}
-      <section className='paddingY-axis'>
+      <section className="paddingY-axis">
         <Industries />
       </section>
 
       {/* wha work section */}
-      <section className='bg_section paddingY-axis'>
+      <section className="bg_section paddingY-axis">
         <WhyWorkWIthSolve />
       </section>
 
       {/* ClientSlider section */}
-      <section className='paddingY-axis'>
+      <section className="paddingY-axis">
         <ClientSlider />
       </section>
 
       {/* awards section */}
-      <section className='bg_section paddingY-axis flex flex-col gap-20'>
+      <section className="bg_section paddingY-axis flex flex-col gap-20">
         <Awards />
         <BenifitsDevSync />
       </section>
 
       {/* Contact section */}
-      <section className='paddingY-axis'>
+      <section className="paddingY-axis">
         <Contact />
       </section>
-
     </div>
   )
 }

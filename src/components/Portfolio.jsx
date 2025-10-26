@@ -6,14 +6,14 @@ const Portfolio = ({ limit, showButton = false }) => {
     const portfolioData = [
         {
             id: 1,
-            title: "Project Management Dashboard",
+            title: "Devsync",
             category: "Startup",
             type: "iOS & Mac",
             service: "According to iOS and Mac",
             result: "1.5M people downloaded",
             tag: "Productivity",
             image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
-            link: "#",
+            link: "/portfolio/devsync",
         },
         {
             id: 2,

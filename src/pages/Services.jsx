@@ -9,7 +9,7 @@ const Services = () => {
     <div>
       {/* hero section */}
       <section className="paddingY-axis bg-[url('/img/noise2.png')] bg-cover bg-center bg-no-repeat">
-        <BreadCrum exPage="Services" HomePage="Home" />
+        <BreadCrum pages={[{ name: 'Services' }]} />
          <ServeRevi pageName="Services" />
       </section>
 
