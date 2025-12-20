@@ -51,20 +51,18 @@ const Awards = () => {
     <div className="container py-10 overflow-hidden">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text_two color_two font-semibold leading-tight">
-          Awards
-        </h2>
+        <h2 className="Heading3 secondaryColor">Awards</h2>
 
         <div className="flex gap-4">
           <button
             onClick={prevSlide}
-            className="bg-white shadow-md hover:bg-gray-100 transition-all color_one p-3 rounded-full cursor-pointer"
+            className="bg-white primaryColor shadow-md hover:bg-gray-100 transition-all p-3 rounded-full cursor-pointer"
           >
             <FaArrowLeft />
           </button>
           <button
             onClick={nextSlide}
-            className="bg-white shadow-md hover:bg-gray-100 transition-all color_one p-3 rounded-full cursor-pointer"
+            className="bg-white primaryColor shadow-md hover:bg-gray-100 transition-all  p-3 rounded-full cursor-pointer"
           >
             <FaArrowRight />
           </button>

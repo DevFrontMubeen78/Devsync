@@ -30,16 +30,16 @@ const PortfolioFunctionality = ({ backgroundColor }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column - End User Part */}
           <div className="flex flex-col gap-9">
-            <h2 className="text_two color_one text-2xl md:text-4xl font-semibold">
+            <h2 className="Heading3 primaryColor">
               Functionality
             </h2>
             <div className="bg-white rounded-3xl shadow p-6">
-              <h2 className="text_three color_one mb-4">End User Part</h2>
+              <h2 className="Heading5 primaryColor mb-4">End User Part</h2>
               <ul className="space-y-3">
                 {endUserPoints.map((point, index) => (
                   <li
                     key={index}
-                    className="flex items-center gap-2 text-gray-800 bg-white rounded-lg p-2 shadow-sm"
+                    className="flex items-center gap-2 Text3 primaryColor bg-white rounded-lg p-2 shadow-sm"
                   >
                     <CheckCircle className="text-green-500" size={20} />
                     {point}

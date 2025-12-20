@@ -6,7 +6,7 @@ const columns = [
             <>
                 Why work <br className="hidden md:inline" />
                 with <br className="hidden md:inline" />
-                SolveIt
+                Devsync
             </>
         ),
     },
@@ -41,7 +41,7 @@ const WhyWorkWIthSolve = () => {
                     >
                         {/* Title with responsive <br> */}
                         {col.title && (
-                            <h2 className="text_two color_two font-semibold leading-tight">
+                            <h2 className="Heading3 secondaryColor">
                                 {col.title}
                             </h2>
                         )}
@@ -56,9 +56,9 @@ const WhyWorkWIthSolve = () => {
                                             key={idx}
                                             className="flex items-center gap-2 text_four color_two"
                                         >
-                                            <span className="text-[#005da2] font-semibold">/</span>
+                                            <span className="GlobleTextColor">/</span>
                                             <span>
-                                                <span className="font-semibold">{first}</span>{' '}
+                                                <span className="Text3 secondaryColor">{first}</span>{' '}
                                                 {rest.join(' ')}
                                             </span>
                                         </li>

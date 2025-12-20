@@ -17,7 +17,7 @@ const IndusExperties = () => {
         <div className="container flex flex-wrap justify-start items-center text-left md:gap-0 gap-10">
             {/* ✅ Left Side (35%) */}
             <div className="w-full md:w-[35%] flex flex-col gap-10 text-left items-start mb-10 md:mb-0">
-                <h2 className="text_two color_one">
+                <h2 className="Heading3 primaryColor">
                     Industry <br className="inline" /> Expertise
                 </h2>
 
@@ -40,7 +40,7 @@ const IndusExperties = () => {
                             className="md:w-16 md:h-16 w-10 h-10 object-contain"
                             onError={(e) => (e.target.style.display = 'none')}
                         />
-                        <span className="text_four color_three">{item.text}</span>
+                        <span className="Text3 primaryColor">{item.text}</span>
                     </div>
                 ))}
             </div>

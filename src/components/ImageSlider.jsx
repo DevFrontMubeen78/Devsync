@@ -37,8 +37,8 @@ const ImageSlider = () => {
                             <a
                                 href={slide.link}
                                 onClick={handleClick}
-                                className="hidden lg:flex absolute bottom-0 right-13 bg-white text-dark px-6 py-5 rounded-[50px] rounded-tr-[0px]
-                                           items-center gap-2 transition-all duration-300 font-bold text-lg"
+                                className="hidden lg:flex absolute bottom-0 right-13 bg-white primaryColor px-6 py-5 rounded-[50px] rounded-tr-[0px]
+                                           items-center gap-2 transition-all duration-300 Heading5"
                             >
                                 <span>Explore Now</span>
                                 <ArrowRight className="relative-top-0.5 transition-transform duration-300 group-hover/item:translate-x-1 -rotate-45" />

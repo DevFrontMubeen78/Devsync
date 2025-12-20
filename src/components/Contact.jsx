@@ -44,10 +44,10 @@ const Contact = () => {
     <div id="contact" className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
       {/* ✅ LEFT SIDE: Contact Form */}
       <div className="flex flex-col justify-center">
-        <h2 className="text_two color_one mb-4">
+        <h2 className="Heading3 primaryColor mb-4">
           Got a project in mind?
         </h2>
-        <p className="text_four color_three mb-8">
+        <p className="primaryColor Text3 mb-8">
           Fill the form and get a free consultation!
         </p>
 

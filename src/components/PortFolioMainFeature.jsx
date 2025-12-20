@@ -57,10 +57,10 @@ const PortFolioMainFeature = ({ backgroundCard }) => {
         {/* LEFT COLUMN */}
         <div className="w-full flex flex-col gap-12">
           <div className="flex flex-col gap-4">
-            <h2 className="text_two color_one text-2xl md:text-4xl font-semibold">
+            <h2 className="Heading3 primaryColor">
               Our Main Features
             </h2>
-            <p className="text_four colur_three">
+            <p className="Text3 primaryColor">
               Discover the key features that make our portfolio stand out and
               deliver outstanding results for our clients.
             </p>
@@ -86,8 +86,8 @@ const PortFolioMainFeature = ({ backgroundCard }) => {
                       : '#ffffff',
                 }}
               >
-                <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-                <p className="text_four colur_three">{card.desc}</p>
+                <h3 className="Heading5 primaryColor mb-2">{card.title}</h3>
+                <p className="Text3 primaryColor">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -156,8 +156,8 @@ const PortFolioMainFeature = ({ backgroundCard }) => {
 
                   {/* Texts */}
                   <div className="flex flex-col gap-2">
-                    <h4 className="text_four color_two font-bold">{item.title}</h4>
-                    <p className="text_five color_two">{item.desc}</p>
+                    <h4 className="Heading5 secondaryColor">{item.title}</h4>
+                    <p className="Text3 secondaryColor">{item.desc}</p>
                   </div>
                 </div>
               )

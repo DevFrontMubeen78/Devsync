@@ -65,7 +65,7 @@ const PortFolioGoals = ({ backgroundTab, backgroundColor }) => {
                     : 'text-amber-700'
                 }`}
               />
-              <h2 className="text_three color_one">{faq.question}</h2>
+              <h2 className="Text1 primaryColor">{faq.question}</h2>
             </div>
             {activeIndex === actualIndex ? (
               <ChevronUp className="text-gray-600" />
@@ -74,7 +74,7 @@ const PortFolioGoals = ({ backgroundTab, backgroundColor }) => {
             )}
           </div>
           {activeIndex === actualIndex && (
-            <div className="p-5 pt-0 text_four color_three transition-all duration-300">
+            <div className="p-5 pt-0 Text3 primaryColor transition-all duration-300">
               {faq.answer}
             </div>
           )}
@@ -85,7 +85,7 @@ const PortFolioGoals = ({ backgroundTab, backgroundColor }) => {
   return (
     <div className={backgroundColor}>
       <div className="container paddingY-axis flex flex-col gap-10">
-        <h1 className="text_two color_one text-2xl md:text-4xl font-semibold">
+        <h1 className="Heading3 primaryColor">
           The Goals
         </h1>
 

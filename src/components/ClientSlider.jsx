@@ -69,11 +69,11 @@ function ClientSlider() {
               </span>
 
               <h2
-                className="absolute -top-10 left-0 text_two relative z-10 text-center"
+                className="absolute -top-10 left-0 Heading3 primaryColor relative z-10 text-center"
                 dangerouslySetInnerHTML={{ __html: review.heading }}
               ></h2>
 
-              <p className="text-gray-700 text-base mb-6 relative z-10 max-w-md text-center md:text-left">
+              <p className="primaryColor Text3 mb-6 relative z-10 max-w-md">
                 {review.review}
               </p>
 

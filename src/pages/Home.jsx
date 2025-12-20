@@ -25,7 +25,7 @@ const Home = () => {
           {/* Heading Section */}
           <div className="text-left">
             <div className="flex items-center gap-4 sm:gap-6 lg:gap-10 flex-wrap">
-              <h1 className="text_one color_one">
+              <h1 className="Heading1 primaryColor">
                 We build
               </h1>
               <img
@@ -34,15 +34,15 @@ const Home = () => {
                 alt="Sticker"
               />
             </div>
-            <h1 className="text_one color_one">
+            <h1 className="Heading1 primaryColor">
               mobile and web apps
             </h1>
           </div>
 
           {/* Description + Buttons */}
           <div className="w-full flex flex-wrap items-center justify-between gap-6">
-            <p className="text_four color_three">
-              For startups, SMEs, and enterprises. Business-results oriented & AI-powered 🚀
+            <p className="Text2 primaryColor">
+              For startups, SMEs, and large firms. Results-driven & AI-enhanced 🚀
             </p>
             <div className="flex md:gap-6 gap-4 items-center">
               <GetAQuote name="Get A Quote" />
@@ -92,7 +92,7 @@ const Home = () => {
 
       {/* Portfolio */}
       <section className="Portfolio paddingY-axis bg_section">
-        <Portfolio limit={3} showButton={true} />
+        <Portfolio limit={3} showButton={true} title="Portfolio" />
       </section>
 
       {/* IndusExperties Section */}

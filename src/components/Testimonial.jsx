@@ -9,7 +9,7 @@ const Testimonial = () => {
       title: "CEO & Founder",
       country: "🇺🇸",
       review:
-        "They have an incredibly hardworking team at affordable pricing. SolveIt built the app earlier than expected and continues to complete new tasks within the client's budget and timeline.",
+        "They have an incredibly hardworking team at affordable pricing. Devsync built the app earlier than expected and continues to complete new tasks within the client's budget and timeline.",
       rating: 5.0,
     },
     {
@@ -61,7 +61,7 @@ const Testimonial = () => {
 
   return (
     <div className="container">
-      <h2 className="text_two color_two mb-12">
+      <h2 className="Heading3 secondaryColor mb-12">
         Clients are saying
       </h2>
 
@@ -81,16 +81,16 @@ const Testimonial = () => {
                 onError={(e) => (e.target.style.display = 'none')}
               />
               <div>
-                <h3 className="text_three flex items-center gap-2">
+                <h3 className="Text1 flex items-center gap-2">
                   {item.name} <span>{item.country}</span>
                 </h3>
                 {/* ✅ Global paragraph class instead of text-gray-400 */}
-                <p className="text_five color_four">{item.title}</p>
+                <p className="Text4">{item.title}</p>
               </div>
             </div>
 
             {/* ✅ Review Text */}
-            <p className="text_four italic mb-4">“{item.review}”</p>
+            <p className="Text3 italic mb-4">“{item.review}”</p>
 
             {/* ✅ Star Ratings + Score */}
             <div className="flex items-center gap-2">

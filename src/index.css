@@ -1,6 +1,17 @@
+/* Hide scrollbar but keep scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 /* =====================
    LOCAL CUSTOM FONT
 ===================== */
+
 @font-face {
   font-family: 'ClashDisplay';
   src: url('/fonts/ClashDisplay-Bold.ttf') format('truetype');
@@ -18,21 +29,25 @@
 /* =====================
    GOOGLE FONT + TAILWIND
 ===================== */
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* =====================
    GLOBAL STYLES
 ===================== */
 body,
-.text_one,
-.text_two {
+.Heading1,
+.Heading2,
+.Heading3,
+.Heading4,
+.Heading5 {
   font-family: 'ClashDisplay', sans-serif !important;
 }
 
 body,
-.text_three,
-.text_four,
-.text_five {
+.Text1,
+.Text2,
+.Text3,
+.Text4 {
   font-family: 'Montserrat', sans-serif !important;
 }
 
@@ -54,60 +69,91 @@ body,
 /* =====================
    TEXT STYLES
 ===================== */
-.text_one {
+.Heading2,
+.Heading3,
+.Heading4,
+.Heading5 {
+  line-height: 52px;
+  text-transform: uppercase;
+  font-weight: 700;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+}
+
+.Heading1 {
   font-size: 84px;
   line-height: 60px;
   letter-spacing: 3px;
   font-weight: 700;
 }
 
-.text_two {
+.Heading2 {
+  font-size: 60px;
+}
+
+.Heading3 {
   font-size: 40px;
-  line-height: 52px;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
-.text_three {
+.Heading4 {
   font-size: 20px;
-  line-height: 28px;
-  font-weight: 600;
 }
 
-.text_four {
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 500;
+.Heading5 {
+  font-size: 18px;
+  line-height: 30px !important;
 }
 
-.text_five {
-  font-size: 15px;
+.Text1,
+.Text2,
+.Text3,
+.Text4 {
+  font-weight: 400;
   line-height: 24px;
+}
+
+.Text1 {
+  font-size: 20px;
+}
+
+.Text2 {
+  font-size: 18px;
+}
+
+.Text3 {
+  font-size: 16px;
+}
+
+.Text4 {
+  font-size: 14px;
 }
 
 /* =====================
    COLORS
 ===================== */
-.color_one {
+.primaryColor {
   color: #1e2a2e !important;
 }
 
-.color_two {
+.secondaryColor {
   color: #fff !important;
 }
 
-.color_three {
-  color: #1e2a2e !important;
+.GlobleColor {
+  background-color: #fad171 !important;
+}
+.GlobleTextColor {
+  color: #fad171 !important;
 }
 
-.color_four {
-  color: #ccc !important;
+.GlobleHC:hover {
+  background-color: #fad171 !important;
+  color: #1f2b2f;
 }
 
 .swiper-wrapper {
   padding: 5rem 0rem;
 }
-
 
 /* =====================
    ANIMATIONS
@@ -205,7 +251,6 @@ body,
 
 @layer utilities {
   @keyframes moveRight {
-
     0%,
     100% {
       transform: translateX(0);
@@ -217,7 +262,6 @@ body,
   }
 
   @keyframes moveDown {
-
     0%,
     100% {
       transform: translateY(0);
@@ -229,7 +273,6 @@ body,
   }
 
   @keyframes moveLeft {
-
     0%,
     100% {
       transform: translateX(0);
@@ -298,7 +341,6 @@ body,
   }
 }
 
-
 /* =====================
    MEDIA QUERIES
 ===================== */
@@ -311,12 +353,12 @@ body,
     padding: 50px 0;
   }
 
-  .text_one {
-    font-size: 70px;
+  .Heading1 {
+    font-size: 54px;
   }
 
-  .text_two {
-    font-size: 44px;
+  .Heading2 {
+    font-size: 52px;
   }
 }
 
@@ -324,23 +366,6 @@ body,
   .heading {
     font-size: 38px;
     line-height: 24px;
-  }
-
-  .bgHeading {
-    font-size: 38px;
-    line-height: 24px;
-  }
-
-  .text_one {
-    font-size: 64px;
-  }
-
-  .text_two {
-    font-size: 40px;
-  }
-
-  .text_three {
-    font-size: 20px;
   }
 }
 
@@ -357,21 +382,21 @@ body,
     width: 100% !important;
   }
 
-  .text_one {
-    font-size: 40px;
+  .Heading2 {
+    font-size: 44px;
   }
 
-  .text_two {
-    font-size: 32px;
-    line-height: 40px;
+  .Heading3 {
+    font-size: 26px;
+    line-height: 32px;
   }
 
-  .text_four {
-    font-size: 15px;
+  .Text1 {
+    font-size: 18px;
   }
 
-  .text_five {
-    font-size: 13px;
+  .Text2 {
+    font-size: 16px;
   }
 
   .swiper-wrapper {

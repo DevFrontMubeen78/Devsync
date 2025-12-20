@@ -42,12 +42,12 @@ const Successfull = () => {
       {/* Animated Counters */}
       <div className="grid xl:grid-cols-5 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-4 mb-12 text-center">
         {countersData.map((counter, index) => (
-          <div key={index} className="mb-6 flex flex-col gap-4">
-            <h2 className="text_two color_two">
+          <div key={index} className="mb-6 flex flex-col gap-6">
+            <h2 className="secondaryColor Heading2">
               {Math.floor(counts[index])}
               {counter.suffix}
             </h2>
-            <p className="text_four color_four">{counter.label}</p>
+            <p className="secondaryColor Text3">{counter.label}</p>
           </div>
         ))}
       </div>

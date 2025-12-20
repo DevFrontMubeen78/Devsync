@@ -14,10 +14,10 @@ const PortfolioLaunc = ({backgroundColor}) => {
       className={backgroundColor}
     >
       <div className="container paddingY-axis flex flex-col items-center justify-center text-center gap-2">
-        <h1 className="text_two color_one text-2xl md:text-4xl font-semibold">
+        <h1 className="Heading3 primaryColor">
           Launching proptech app?
         </h1>
-        <p className="text_four color_three mb-5">
+        <p className="Text3 primaryColor mb-5">
           We’re ready to help with design, development, and growth!
         </p>
         <QuoteBtnPage name="Contact Us" />

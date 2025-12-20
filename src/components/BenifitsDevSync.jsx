@@ -14,7 +14,7 @@ const BenefitsDevSync = () => {
   return (
     <div className="flex flex-col md:gap-10 gap-10 overflow-hidden">
       {/* ✅ Heading */}
-      <h1 className="container text_two color_two font-semibold leading-tight text-2xl">
+      <h1 className="container Heading3 secondaryColor">
         Benefits of working at DevSync
       </h1>
 
@@ -32,7 +32,7 @@ const BenefitsDevSync = () => {
               </div>
 
               {/* ✅ Benefit text */}
-              <h2 className="text-four font-medium color_two">
+              <h2 className="Text4 secondaryColor">
                 {item.benefit}
               </h2>
             </div>

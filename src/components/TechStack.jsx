@@ -22,7 +22,7 @@ const TechStack = () => {
         <div className="container mx-auto flex flex-col gap-20">
             {/* Header */}
             <div className="flex flex-col gap-10">
-                <h2 className="text_two color_two">Technology Stack</h2>
+                <h2 className="Heading3 secondaryColor">Technology Stack</h2>
 
                 {/* Logos */}
                 <div className="flex flex-wrap justify-between lg:gap-14 md:gap-10 gap-3">
@@ -41,7 +41,7 @@ const TechStack = () => {
             <div className="md:mb-0 mb-12 grid lg:grid-cols-2 grid-cols-1 gap-8 items-center">
                 {/* Heading */}
                 <div className="order-1 lg:order-1 order-1 text-left">
-                    <h2 className="text_two color_two">
+                    <h2 className="Heading3 secondaryColor">
                         50+ in-house <br /> specialists
                     </h2>
                 </div>
@@ -54,7 +54,7 @@ const TechStack = () => {
                             className="relative border-2 border-[#a4a2a2] p-5 flex flex-col items-center justify-center text_two color_two md:w-36 md:h-36 w-20 h-20 sm:w-24 sm:h-24"
                         >
                             <span
-                                className={`absolute animated-label px-3 py-2 text_four z-10 color_one bg-[#fff] rounded-tr-4xl rounded-tl-4xl rounded-bl-4xl ${item.label === "Middle" ? "reverse-animation" : ""
+                                className={`absolute animated-label px-3 py-2 text_four z-10 primaryColor bg-[#fff] rounded-tr-4xl rounded-tl-4xl rounded-bl-4xl ${item.label === "Middle" ? "reverse-animation" : ""
                                     }`}
                             >
                                 {item.label}
@@ -70,7 +70,7 @@ const TechStack = () => {
                             <div className="absolute z-0 -bottom-1 -right-1 w-3 h-3 bg-white"></div>
 
                             {item.value && (
-                                <span className="text-2xl md:text-4xl z-0">{item.value}</span>
+                                <span className="Heading3 secondaryColor md:text-4xl z-0">{item.value}</span>
                             )}
                         </div>
                     ))}

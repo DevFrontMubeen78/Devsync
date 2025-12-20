@@ -56,8 +56,8 @@ const ServeRevi = ({ pageName }) => {
         <div className="container w-full flex flex-col lg:flex-row items-start justify-start gap-14">
             {/* Left Section */}
             <div className="w-full lg:w-1/2 text lg:text-left flex flex-col gap-6">
-                <h2 className="text_two color_one">{pageName}</h2>
-                <p className="text_four color_three">
+                <h2 className="Heading3 primaryColor">{pageName}</h2>
+                <p className="Text3 primaryColor">
                     Each review reflects our dedication to quality and excellence. Hear what our clients have to say about our work, communication, and reliability. Each review reflects our dedication to quality and excellence.
                     Hear what our clients have to say about our work, communication, and reliability. Each review reflects our dedication to quality and excellence.
                 </p>

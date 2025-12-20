@@ -1,171 +1,143 @@
-import React from "react";
-import { ArrowRight } from "lucide-react";
+import React, { useState } from 'react'
+import { ArrowRight } from 'lucide-react'
 
 const OurServices = () => {
-  // 🔹 Dynamic data (array of objects with link names & URLs)
   const services = [
     {
-      title: "Web Development",
+      title: 'Mobile Apps',
       description:
-        "We build scalable and responsive web applications using modern technologies.",
+        'We create high-quality mobile apps that bring profit. From idea validation to successful launch.',
       links: [
-        { name: "Frontend Development", url: "/services/frontend" },
-        { name: "Backend APIs", url: "/services/backend" },
-        { name: "Full Stack Solutions", url: "/services/fullstack" },
+        { name: 'iOS App Development', url: '/services/ios-app' },
+        { name: 'Android App Development', url: '/services/android-app' },
+        {
+          name: 'Cross-platform App Development',
+          url: '/services/cross-platform-app',
+        },
       ],
+      link: '/services/mobile-app-development',
     },
     {
-      title: "Mobile Apps",
+      title: 'Web Solutions',
       description:
-        "Delivering user-friendly mobile apps for Android and iOS platforms.",
-      links: [
-        { name: "React Native Apps", url: "/services/react-native" },
-        { name: "Flutter Solutions", url: "/services/flutter" },
-        { name: "App Maintenance", url: "/services/maintenance" },
-      ],
+        'We deliver web solutions from simple websites to engaging applications. We build regular web apps, as well as SPA and PWA.',
+      links: [{ name: 'Front-end Development', url: '/services/ios-app' }],
+      link: '/services/web-development',
     },
     {
-      title: "UI/UX Design",
+      title: 'Custom software',
       description:
-        "Crafting intuitive interfaces and delightful user experiences.",
-      links: [
-        { name: "Wireframing", url: "/services/wireframing" },
-        { name: "Prototyping", url: "/services/prototyping" },
-        { name: "Design Systems", url: "/services/design-systems" },
-      ],
+        'Custom software gives you full control over your business processes and cuts burdening costs.',
+      link: '/services/custom-software',
     },
     {
-      title: "Digital Marketing",
+      title: 'MVP development',
       description:
-        "Boosting online presence through SEO, SEM, and social campaigns.",
-      links: [
-        { name: "SEO Optimization", url: "/services/seo" },
-        { name: "Content Strategy", url: "/services/content-strategy" },
-        { name: "Paid Ads Management", url: "/services/ads" },
-      ],
+        'Our team helps you get the product to the market within 3 months.',
+      link: '/services/mvp-development',
     },
     {
-      title: "E-Commerce Solutions",
+      title: 'Discovery Phase',
       description:
-        "Building secure and feature-rich e-commerce platforms.",
-      links: [
-        { name: "Shopify Stores", url: "/services/shopify" },
-        { name: "WooCommerce", url: "/services/woocommerce" },
-        { name: "Custom Integrations", url: "/services/custom-integrations" },
-      ],
+        'A proper project discovery phase helps to reduce time-to-market and initial project estimates by 20%.',
+      link: '/services/discover-phase-services',
     },
     {
-      title: "Cloud Services",
+      title: 'Dedicated Team',
       description:
-        "Enabling cloud migration, automation, and scalable infrastructure.",
-      links: [
-        { name: "AWS Setup", url: "/services/aws" },
-        { name: "DevOps CI/CD", url: "/services/devops" },
-        { name: "Cloud Security", url: "/services/cloud-security" },
-      ],
+        'Hire a flexible team with the skill set you need to reduce costs and speed up development.',
+      link: '/services/dedicated-team',
     },
     {
-      title: "Cybersecurity",
+      title: 'UI/UX Design Services',
       description:
-        "Protecting your data and applications from evolving threats.",
-      links: [
-        { name: "Security Audits", url: "/services/audits" },
-        { name: "Penetration Testing", url: "/services/pentest" },
-        { name: "Compliance Checks", url: "/services/compliance" },
-      ],
+        'Our UI/UX experts follow modern design principles and trends to ensure your app looks up to date.',
+      link: '/services/ui-ux-design',
     },
     {
-      title: "Data Analytics",
+      title: 'Mobile App Design',
       description:
-        "Turning raw data into valuable business insights.",
-      links: [
-        { name: "Data Warehousing", url: "/services/data-warehousing" },
-        { name: "BI Dashboards", url: "/services/bi-dashboards" },
-        { name: "Predictive Analytics", url: "/services/predictive" },
-      ],
+        'We provide app design services including user research, prototyping, design consulting, and also app redesign.',
+      link: '/services/mobile-app-design',
     },
     {
-      title: "AI & Automation",
+      title: 'Tech Consulting & Audit',
       description:
-        "Streamlining processes using AI models and automation pipelines.",
-      links: [
-        { name: "Chatbots", url: "/services/chatbots" },
-        { name: "ML Models", url: "/services/ml-models" },
-        { name: "Process Automation", url: "/services/automation" },
-      ],
+        'Our experts help to identify bottlenecks and ways to improve your software performance.',
     },
     {
-      title: "Brand Strategy",
+      title: 'QA & Testing',
       description:
-        "Helping brands build strong digital identities and storytelling.",
-      links: [
-        { name: "Logo Design", url: "/services/logo" },
-        { name: "Brand Guidelines", url: "/services/brand-guidelines" },
-        { name: "Market Research", url: "/services/market-research" },
-      ],
+        'We ensure the quality of the developed solutions with a variety of software testing services: manual and automation testing, usability and security testing, QA consulting.',
     },
     {
-      title: "Consulting",
+      title: 'SLA Support',
       description:
-        "Guiding businesses toward digital transformation and growth.",
-      links: [
-        { name: "Tech Consulting", url: "/services/tech-consulting" },
-        { name: "Strategy Planning", url: "/services/strategy" },
-        { name: "Workshops", url: "/services/workshops" },
-      ],
+        'Except for our free 30-day post-launch warranty we provide full-cycle SLA support on flexible terms.',
     },
-    {
-      title: "Support & Maintenance",
-      description:
-        "Ensuring systems run smoothly with 24/7 technical support.",
-      links: [
-        { name: "Bug Fixing", url: "/services/bug-fixing" },
-        { name: "System Updates", url: "/services/system-updates" },
-        { name: "Performance Optimization", url: "/services/optimization" },
-      ],
-    },
-  ];
+  ]
+
+  const [hoveredIndex, setHoveredIndex] = useState(null)
 
   return (
     <div className="container flex flex-col gap-10">
-      <h1 className="text_two color_two">Our Services</h1>
+      <h1 className="Heading3 secondaryColor">Our Services</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-[#26363b] p-6 rounded-2xl shadow-md border border-gray-700"
+            className="bg-[#26363b] p-6 rounded-2xl shadow-md border border-gray-700 relative group"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
           >
-            {/* Heading */}
-            <h2 className="text_three color_two mb-2">{service.title}</h2>
+            <h2
+              className="Heading5 secondaryColor mb-2 relative flex items-center"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              {service.title}
+
+              {hoveredIndex === index && service.link && (
+                <a
+                  href={service.link}
+                  className="absolute right-0 top-1/2 transform -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-gray-700 rounded-full hover:bg-gray-600 transition"
+                >
+                  <ArrowRight size={16} className="text-white" />
+                </a>
+              )}
+            </h2>
 
             {/* Border bottom */}
             <div className="border-b border-gray-500 mb-3"></div>
 
             {/* Paragraph */}
-            <p className="text_four mb-4">
-              {service.description}
-            </p>
+            <p className="Text3 secondaryColor mb-4">{service.description}</p>
 
-            {/* Links List */}
-            <ul className="space-y-2">
-              {service.links.map((link, i) => (
-                <li key={i} className="text_five color_four flex items-center gap-2">
-                  <a
-                    href={link.url}
-                    className="list underline-offset-2"
+            {/* Links list (only if exist) */}
+            {service.links && (
+              <ul className="space-y-2">
+                {service.links.map((link, i) => (
+                  <li
+                    key={i}
+                    className="Text4 secondaryColor flex items-center gap-2"
                   >
-                    {link.name}
-                  </a>
-                  <ArrowRight size={16} className="mr-2 text-gray-400 -rotate-45" />
-                </li>
-              ))}
-            </ul>
+                    <a href={link.url} className="list underline-offset-2">
+                      {link.name}
+                    </a>
+                    <ArrowRight
+                      size={16}
+                      className="mr-2 text-gray-400 -rotate-45"
+                    />
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default OurServices;
+export default OurServices

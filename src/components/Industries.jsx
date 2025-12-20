@@ -74,15 +74,15 @@ const Industries = () => {
     <div className='container flex justify-between flex-wrap gap-10'>
       {/* LEFT SIDE */}
       <div className="flex flex-col gap-10">
-        <h2 className="text_two color_one">Industries</h2>
+        <h2 className="Heading3 primaryColor">Industries</h2>
 
         <ul className='flex gap-4 flex-wrap'>
           {industries.map((group, i) => (
             <div key={i} className="flex flex-col md:gap-5 gap-2">
               {group.map((item, idx) => (
                 <li key={idx} className='flex items-center gap-2'>
-                  <span className='text-[#005da2] font-semibold'>/</span>
-                  <span className='text_four color_three'>{item}</span>
+                  <span className='GlobleTextColor font-semibold'>/</span>
+                  <span className='Text3 primaryColor color_three'>{item}</span>
                 </li>
               ))}
             </div>
@@ -92,7 +92,7 @@ const Industries = () => {
 
       {/* RIGHT SIDE GRAPH */}
       <div className="flex flex-col justify-start items-start pt-2 w-full lg:w-[45%]">
-        <h2 className='text_four color_one font-bold'>Our clients</h2>
+        <h2 className='Heading5 primaryColor font-bold'>Our clients</h2>
         <div className="size-range-graph__canvas w-full h-64">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart

@@ -1,71 +1,107 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ShoppingCart, Package, Truck } from "lucide-react";
+import { FaStethoscope } from "react-icons/fa";
+import { FaMedapps } from "react-icons/fa6";
 
 const cards = [
   {
-    id: 1,
     title: "Retail & E-commerce",
-    desc:
+    description:
       "Custom e-commerce software with a powerful admin panel, payment integrations, inventory management, real-time reporting, shipping automation, loyalty program, and more.",
-    features: [
+    list: [
       "Retail mobile applications",
-      "Inventory & order sync",
-      "Payment gateway integrations",
-      "Shipping automation",
-      "Loyalty & coupon engines",
+      "Marketplaces",
+      "Store inventory software",
+      "Order management solutions",
     ],
-    icon: <ShoppingCart size={28} />,
+    cases: [
+      { name: "Mobile store of eco-products", link: "/portfolio/natural-health" },
+      { name: "Children's store app", link: "/portfolio/mobile-app-for-children-store" },
+    ],
+    icon: <ShoppingCart />,
   },
   {
-    id: 2,
-    title: "Supply Chain",
-    desc: "Supply chain visibility, warehouse management, and logistics automation.",
-    features: ["WMS", "Track & trace", "Automated reordering"],
-    icon: <Truck size={28} />,
-  },
-  {
-    id: 3,
-    title: "Wholesale & B2B",
-    desc: "B2B portals, price lists, credit management, and bulk order workflows.",
-    features: ["B2B portal", "Volume pricing", "PO workflows"],
-    icon: <Package size={28} />,
-  },
-  {
-    id: 4,
-    title: "Real Estate Tech",
-    desc: "Smart property management systems and automation tools.",
-    features: ["Property listings", "Payment tracking", "Tenant portals"],
-    icon: <Package size={28} />,
-  },
-  {
-    id: 5,
     title: "Healthcare",
-    desc: "Clinic management and telehealth solutions.",
-    features: ["Patient records", "Appointment scheduling", "e-Prescriptions"],
-    icon: <Truck size={28} />,
+    description:
+      "Increase patient engagement and get positive healthcare outcomes with digital products and technology services for healthcare practitioners and organizations.",
+    list: [
+      "Health tracking applications",
+      "Patient portals",
+      "Apps for clinics, pharmacies, and medical centers",
+      "Telemedicine software",
+    ],
+    cases: [{ name: "Dental center app", link: "/portfolio/med-expert-app" }],
+    icon: <FaStethoscope />,
   },
   {
-    id: 6,
-    title: "Education",
-    desc: "Learning management systems and online course platforms.",
-    features: ["Course creation", "Student portal", "Payment integration"],
-    icon: <ShoppingCart size={28} />,
+    title: "Transportation and Logistics",
+    description:
+      "Scalable software with intuitive interfaces and interactive maps to help clients get fast and easy access to transportation and logistics services.",
+    list: [
+      "Supply chain management solutions",
+      "Warehouse management software",
+      "Delivery and taxi apps",
+      "Vehicle sharing and rental apps",
+      "Route planning apps",
+    ],
+    cases: [
+      { name: "Cargo ordering app", link: "/portfolio/coucouvan" },
+      { name: "On-demand services app", link: "/portfolio/ymaster" },
+      { name: "Car dealer app", link: "/portfolio/maximum-avto" },
+    ],
+    icon: <Truck />,
+  },
+  {
+    title: "Travel & Booking",
+    description: "Software for advanced traveler’s experience and agency sales growth.",
+    list: [
+      "Travel agency portals",
+      "Booking apps",
+      "Hotel management systems",
+      "Trip planning software",
+    ],
+    cases: [{ name: "Flight tickets booking app", link: "/portfolio/vityaz-aero" }],
+    icon: <Package />,
+  },
+  {
+    title: "Telecom and social",
+    description:
+      "Custom solutions for internet and media service companies to manage business processes, and partners, extend service coverage, and improve client engagement.",
+    list: [
+      "Telecom service apps",
+      "Social media solutions",
+      "Client engagement platforms",
+      "Business process automation",
+    ],
+    cases: [],
+    icon: <FaMedapps />,
+  },
+  {
+    title: "Finance",
+    description:
+      "We design and develop secure and compliant software with microservices technology that improves the financial experience.",
+    list: [
+      "Digital banking and neobank software",
+      "Personal finance management apps",
+      "E-wallets",
+      "Leasing software",
+      "Investment apps",
+    ],
+    cases: [],
+    icon: <Truck />,
   },
 ];
 
 function TechExpert() {
   return (
     <section className="container flex flex-col gap-20">
-      <h2 className="text_two color_two mb-12">
-        Industry-specific Software
-      </h2>
+      <h2 className="Heading3 secondaryColor mb-12">Industry-specific Software</h2>
 
-      {/* 2 Columns */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-20">
         {cards.map((card) => (
           <article
-            key={card.id}
+            key={card.title}
             className="relative border border-gray-600 rounded-none overflow-visible p-6"
           >
             {/* Icon Circle */}
@@ -76,34 +112,30 @@ function TechExpert() {
             </div>
 
             <div className="mt-12 flex flex-col gap-4">
-              <h3 className="text_three color_two mb-2">{card.title}</h3>
+              <h3 className="Heading4 GlobleTextColor mb-2">{card.title}</h3>
 
-              {/* Paragraph updated */}
-              <p className="text_four color_two mb-4">{card.desc}</p>
+              <p className="Text3 secondaryColor mb-4">{card.description}</p>
 
               <ul className="space-y-1 mb-4">
-                {card.features.map((f, i) => (
-                  <li key={i} className="flex items-center gap-2 text_five color_four">
-                    <span className="inline-block w-4">/</span>
+                {card.list.map((f, i) => (
+                  <li key={i} className="flex items-center gap-2 Text3 secondaryColor">
+                    <span className="Text3 GlobleTextColor inline-block w-4">/</span>
                     <span>{f}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  to="#"
-                  className="inline-block text-sm px-3 py-2 border border-gray-600 rounded-md transition-all duration-300 hover:bg-[#025c9e] hover:text-[#fff]"
-                >
-                  Mobile store of eco-products
-                </Link>
-                <Link
-                  to="#"
-                  className="inline-block text-sm px-3 py-2 border border-gray-600 rounded-md transition-all duration-300 hover:bg-[#025c9e] hover:text-[#fff]"
-                >
-                  Children's store app
-                </Link>
-              </div>
+              {/* <div className="flex flex-wrap gap-3">
+                {card.cases.map((btn, i) => (
+                  <Link
+                    key={i}
+                    to={btn.link}
+                    className="inline-block Text4 secondaryColor px-3 py-2 border border-gray-600 rounded-md transition-all duration-300 GlobleHC"
+                  >
+                    {btn.name}
+                  </Link>
+                ))}
+              </div> */}
             </div>
           </article>
         ))}
@@ -112,4 +144,4 @@ function TechExpert() {
   );
 }
 
-export default TechExpert
+export default TechExpert;

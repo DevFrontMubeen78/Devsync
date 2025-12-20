@@ -18,14 +18,14 @@ const PortFolionAboutProject = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* LEFT SIDE */}
         <div className="flex flex-col gap-10 text-left">
-          <h2 className="text_two color_one text-2xl md:text-4xl font-semibold">
+          <h2 className="Heading3 primaryColor">
             About the project
           </h2>
 
           {/* The Impact */}
           <div>
-            <h3 className="text_three color_one mb-2">The Impact</h3>
-            <p className="text_four color_three">
+            <h3 className="Heading5 primaryColor mb-2">The Impact</h3>
+            <p className="Text3 primaryColor">
               Our project delivered transformative digital strategies,
               increasing the client’s online presence and brand recognition
               across Europe.
@@ -34,8 +34,8 @@ const PortFolionAboutProject = () => {
 
           {/* The Client */}
           <div>
-            <h3 className="text_three color_one mb-2">The Client</h3>
-            <p className="text_four color_three">
+            <h3 className="Heading5 primaryColor mb-2">The Client</h3>
+            <p className="Text3 primaryColor">
               BloomHouse Marketing is a creative agency based in Europe,
               specializing in brand growth and content innovation.
             </p>

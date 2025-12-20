@@ -23,7 +23,7 @@ const ModernTechStack = () => {
     <div className="container container_hide overflow-hidden">
       <div className="flex flex-col md:flex-row justify-between items-start gap-10">
         {/* Left Heading */}
-        <h2 className="text_two color_two md:py-20 py-10 md:px-0 px-5 md:w-1/3">
+        <h2 className="Heading3 secondaryColor md:py-20 py-10 md:px-0 px-5 md:w-1/3">
           Tech Stack
           <br />
           Modern
@@ -46,7 +46,7 @@ const ModernTechStack = () => {
                       alt={item.name}
                       className="w-12 h-12 mb-3 object-contain"
                     />
-                    <h3 className="font-bold text-lg">{item.title}</h3>
+                    <h3 className="Heading5 secondaryColor">{item.title}</h3>
                     <p className="paragraph">{item.name}</p>
                   </div>
                 ))}
@@ -66,8 +66,8 @@ const ModernTechStack = () => {
                       alt={item.name}
                       className="w-12 h-12 mb-3 object-contain"
                     />
-                    <h3 className="font-bold text-lg">{item.title}</h3>
-                    <p className="text-sm text-white/70">{item.name}</p>
+                    <h3 className="Heading5 secondaryColor">{item.title}</h3>
+                    <p className="Text4 secondaryColor">{item.name}</p>
                   </div>
                 ))}
               </div>
@@ -89,8 +89,8 @@ const ModernTechStack = () => {
                       alt={item.name}
                       className="w-12 h-12 mb-3 object-contain"
                     />
-                    <h3 className="font-bold text-lg">{item.title}</h3>
-                    <p className="text-sm text-white/70">{item.name}</p>
+                    <h3 className="Heading5 secondaryColor">{item.title}</h3>
+                    <p className="Text4 secondaryColor">{item.name}</p>
                   </div>
                 ))}
               </div>
@@ -109,8 +109,8 @@ const ModernTechStack = () => {
                       alt={item.name}
                       className="w-12 h-12 mb-3 object-contain"
                     />
-                    <h3 className="font-bold text-lg">{item.title}</h3>
-                    <p className="text-sm text-white/70">{item.name}</p>
+                    <h3 className="Heading5 secondaryColor">{item.title}</h3>
+                    <p className="Text4 secondaryColor">{item.name}</p>
                   </div>
                 ))}
               </div>
@@ -129,8 +129,8 @@ const ModernTechStack = () => {
                       alt={item.name}
                       className="w-12 h-12 mb-3 object-contain"
                     />
-                    <h3 className="font-bold text-lg">{item.title}</h3>
-                    <p className="text-sm text-white/70">{item.name}</p>
+                    <h3 className="Heading5 secondaryColor">{item.title}</h3>
+                    <p className="Text4 secondaryColor">{item.name}</p>
                   </div>
                 ))}
               </div>

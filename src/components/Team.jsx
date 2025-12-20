@@ -68,7 +68,7 @@ export default function TeamSlider() {
   return (
     <div className="container w-full">
       {/* Header */}
-        <h2 className="text_two color_one">Our Team</h2>
+        <h2 className="Heading3 primaryColor">Our Team</h2>
 
       {/* Swiper */}
       <Swiper
@@ -110,8 +110,8 @@ export default function TeamSlider() {
                   alt={member.name}
                   className="w-28 h-28 rounded-full mb-3 object-cover"
                 />
-                <h3 className="text_three color_one">{member.name}</h3>
-                <p className="text_five color_three mb-2">
+                <h3 className="Heading5 primaryColor">{member.name}</h3>
+                <p className="Text3 primaryColor mb-2">
                   {member.designation}
                 </p>
                 <div className="flex items-center justify-center gap-3">
